@@ -1,0 +1,3 @@
+C:/Users/hugoa/Desktop/Runora/build/CMakeFiles/Runora.dir
+C:/Users/hugoa/Desktop/Runora/build/CMakeFiles/edit_cache.dir
+C:/Users/hugoa/Desktop/Runora/build/CMakeFiles/rebuild_cache.dir
