@@ -153,54 +153,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/menu.obj: src/menu.cpp.obj
-.PHONY : src/menu.obj
-
-# target to build an object file
-src/menu.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/menu.cpp.obj
-.PHONY : src/menu.cpp.obj
-
-src/menu.i: src/menu.cpp.i
-.PHONY : src/menu.i
-
-# target to preprocess a source file
-src/menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/menu.cpp.i
-.PHONY : src/menu.cpp.i
-
-src/menu.s: src/menu.cpp.s
-.PHONY : src/menu.s
-
-# target to generate assembly for a file
-src/menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/menu.cpp.s
-.PHONY : src/menu.cpp.s
-
-src/tilemap.obj: src/tilemap.cpp.obj
-.PHONY : src/tilemap.obj
-
-# target to build an object file
-src/tilemap.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/tilemap.cpp.obj
-.PHONY : src/tilemap.cpp.obj
-
-src/tilemap.i: src/tilemap.cpp.i
-.PHONY : src/tilemap.i
-
-# target to preprocess a source file
-src/tilemap.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/tilemap.cpp.i
-.PHONY : src/tilemap.cpp.i
-
-src/tilemap.s: src/tilemap.cpp.s
-.PHONY : src/tilemap.s
-
-# target to generate assembly for a file
-src/tilemap.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/tilemap.cpp.s
-.PHONY : src/tilemap.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -213,12 +165,6 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
-	@echo ... src/menu.obj
-	@echo ... src/menu.i
-	@echo ... src/menu.s
-	@echo ... src/tilemap.obj
-	@echo ... src/tilemap.i
-	@echo ... src/tilemap.s
 .PHONY : help
 
 

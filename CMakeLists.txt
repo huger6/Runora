@@ -13,8 +13,14 @@ endif()
 set(SFML_ROOT "C:/C++ Libraries/SFML-3.0.0")
 set(SFML_DIR "${SFML_ROOT}/lib/cmake/SFML")
 
+#Nlohmann JSON
+set(NLOHMANN_DIR "C:/C++ Libraries/JSON")
+
 #CONFIG makes SFML::Window and such possible
 find_package(SFML 3 COMPONENTS Graphics Window System CONFIG REQUIRED)
+
+#nlohmann
+include_directories(${NLOHMANN_DIR})
 
 # .exe
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)

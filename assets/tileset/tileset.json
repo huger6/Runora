@@ -1,0 +1,52 @@
+{
+    "tiles": [
+        {
+            "id": 1,
+            "name": "air",
+            "type": "Air",
+            "textureX": 0,
+            "textureY": 0,
+            "collision": "none"
+        },
+        {
+            "id": 2,
+            "name": "clouds",
+            "type": "Air",
+            "textureX": 16,
+            "textureY": 0,
+            "collision": "none"
+        },
+        {
+            "id": 3,
+            "name": "brick",
+            "type": "Ground",
+            "textureX": 0,
+            "textureY": 16,
+            "collision": "solid"
+        },
+        {
+            "id": 4,
+            "name": "water",
+            "type": "Water",
+            "textureX": 0,
+            "textureY": 32,
+            "collision": "liquid"
+        },
+        {
+            "id": 5,
+            "name": "waves",
+            "type": "Water",
+            "textureX": 0,
+            "textureY": 48,
+            "collision": "liquid"
+        },
+        {
+            "id": 6,
+            "name": "lava",
+            "type": "Lava",
+            "textureX": 0,
+            "textureY": 64,
+            "collision": "liquid"
+        }
+    ]
+}

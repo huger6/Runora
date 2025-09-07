@@ -6,5 +6,5 @@ CXX_DEFINES = -DASSETS_PATH=\"C:/Users/hugoa/Desktop/Runora/assets\" -DSFML_STAT
 
 CXX_INCLUDES = @CMakeFiles/Runora.dir/includes_CXX.rsp
 
-CXX_FLAGS = -std=c++20 -Wall -Wextra -Wpedantic
+CXX_FLAGS = -g -std=c++20 -Wall -Wextra -Wpedantic
 

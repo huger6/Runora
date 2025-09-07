@@ -4,10 +4,48 @@
 #include <SFML/Graphics.hpp>
 #include <utils.hpp>
 
+class KeyClicked {
+    private:
+        static inline std::array<bool, sf::Keyboard::KeyCount> wasPressed{};
+    public:
+        static bool isKeyClicked(sf::Keyboard::Key key) {
+            bool pressed = sf::Keyboard::isKeyPressed(key);
+
+            if (pressed && !wasPressed[static_cast<size_t>(key)]) {
+                wasPressed[static_cast<size_t>(key)] = true;
+                return true;
+            }
+            if (!pressed) {
+                wasPressed[static_cast<size_t>(key)] = false;
+            }
+
+            return false;
+        }
+};
+
+class MouseClicked {
+    private:
+        static inline std::array<bool, sf::Mouse::ButtonCount> wasPressed{};
+    public:
+        static bool isBtnClicked(sf::Mouse::Button btn) {
+            bool pressed = sf::Mouse::isButtonPressed(btn);
+
+            if (pressed && !wasPressed[static_cast<size_t>(btn)]) {
+                wasPressed[static_cast<size_t>(btn)] = true;
+                return true;
+            }
+            if (!pressed) {
+                wasPressed[static_cast<size_t>(btn)] = false;
+            }
+
+            return false;
+        }
+};
+
 class Button {
     private:
         sf::RectangleShape shape;
-        sf::Color bgColor;
+        sf::Color bgColor;  
         sf::Color textColor;
         sf::Color hoverColor;
         sf::Text text;
@@ -49,7 +87,7 @@ class Button {
         }
 
         bool isClicked(const sf::RenderWindow& window) {
-            return isHovered(window) && sf::Mouse::isButtonPressed(sf::Mouse::Button::Left);
+            return isHovered(window) && MouseClicked::isBtnClicked(sf::Mouse::Button::Left);
         }
 
         void changeLabel(std::string& newLabel) {

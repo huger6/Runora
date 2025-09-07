@@ -1,14 +1,30 @@
 #pragma once
 #include <SFML/System.hpp>
+#include <SFML/Graphics.hpp>
 #include <iostream>
 #include <string>
 
 class GameTimer {
     private:
         sf::Clock clock;
-
-        sf::Time getElapsed() const { return clock.getElapsedTime(); }
+        
+        sf::Time getElapsed() const { return clock.getElapsedTime(); } // Get time elapsed until now
+    protected:
+        sf::Text time;
     public:
+        explicit GameTimer(sf::View& view) : time(getFont()) {
+            clock.start();
+
+            time.setFillColor(sf::Color::White);
+            time.setOrigin(time.getLocalBounds().getCenter());
+
+            sf::Vector2f center = view.getCenter();
+            sf::Vector2f size = view.getSize();
+            float left = center.x - size.x / 2.0f;
+            float top = center.y - size.y / 2.0f;
+            time.setPosition({left + 30.0f, top + 20.0f});
+        }
+
         void start() {
             clock.restart();
         }
@@ -34,5 +50,10 @@ class GameTimer {
 
             if (hours > 99) return std::string("");
             return std::format("{:02}:{:02}:{:02}", hours, mins, secs);
+        }
+
+        void draw(sf::RenderWindow& window) {
+            time.setString(getElapsedFormatted());
+            window.draw(time);
         }
 };

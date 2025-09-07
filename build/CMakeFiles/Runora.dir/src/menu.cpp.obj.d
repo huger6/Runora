@@ -309,7 +309,7 @@ CMakeFiles/Runora.dir/src/menu.cpp.obj: \
  C:/C__LIB~1/SFML-3~1.0/include/SFML/System/InputStream.hpp \
  C:/C__LIB~1/SFML-3~1.0/include/SFML/System/MemoryInputStream.hpp \
  C:/C__LIB~1/SFML-3~1.0/include/SFML/System/Sleep.hpp \
- C:/Users/hugoa/Desktop/Runora/include/constants.hpp \
+ C:/Users/hugoa/Desktop/Runora/include/getters.hpp \
  C:/Users/hugoa/Desktop/Runora/include/menu.hpp \
  C:/Users/hugoa/Desktop/Runora/include/button.hpp \
  C:/Users/hugoa/Desktop/Runora/include/utils.hpp \

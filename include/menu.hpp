@@ -4,7 +4,7 @@
 #include <string>
 #include <SFML/Graphics.hpp>
 #include <button.hpp>
-#include <constants.hpp>
+#include <getters.hpp>
 
 enum class GameState {
     MAIN_MENU,
@@ -124,8 +124,17 @@ class PauseMenu : public MainMenu {
         }
 
         void update(sf::RenderWindow& window) {
+            bool anyHover = false;
+
             resumeBtn.update(window);
             optionsBtn.update(window);
             returnToMenuBtn.update(window);
+
+            if (resumeBtn.isHovered(window) || optionsBtn.isHovered(window) || returnToMenuBtn.isHovered(window)) {
+                anyHover = true;
+            }
+            
+            if (anyHover) setMouseAsHand(window);
+            else setMouseAsArrow(window);
         }
 };

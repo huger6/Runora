@@ -9,8 +9,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/hugoa/Desktop/Runora/src/main.cpp" "CMakeFiles/Runora.dir/src/main.cpp.obj" "gcc" "CMakeFiles/Runora.dir/src/main.cpp.obj.d"
-  "C:/Users/hugoa/Desktop/Runora/src/menu.cpp" "CMakeFiles/Runora.dir/src/menu.cpp.obj" "gcc" "CMakeFiles/Runora.dir/src/menu.cpp.obj.d"
-  "C:/Users/hugoa/Desktop/Runora/src/tilemap.cpp" "CMakeFiles/Runora.dir/src/tilemap.cpp.obj" "gcc" "CMakeFiles/Runora.dir/src/tilemap.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

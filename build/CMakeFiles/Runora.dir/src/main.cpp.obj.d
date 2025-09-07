@@ -312,5 +312,60 @@ CMakeFiles/Runora.dir/src/main.cpp.obj: \
  C:/Users/hugoa/Desktop/Runora/include/menu.hpp \
  C:/Users/hugoa/Desktop/Runora/include/button.hpp \
  C:/Users/hugoa/Desktop/Runora/include/utils.hpp \
- C:/Users/hugoa/Desktop/Runora/include/constants.hpp \
- C:/Users/hugoa/Desktop/Runora/include/time.hpp
+ C:/Users/hugoa/Desktop/Runora/include/getters.hpp \
+ C:/Users/hugoa/Desktop/Runora/include/time.hpp \
+ C:/Users/hugoa/Desktop/Runora/include/tile.hpp \
+ C:/mingw64/include/c++/15.1.0/fstream \
+ C:/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/mingw64/include/c++/15.1.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/mingw64/include/c++/15.1.0/bits/fstream.tcc C:/C__LIB~1/JSON/json.hpp \
+ C:/mingw64/include/c++/15.1.0/algorithm \
+ C:/mingw64/include/c++/15.1.0/bits/ranges_algo.h \
+ C:/mingw64/include/c++/15.1.0/pstl/glue_algorithm_defs.h \
+ C:/mingw64/include/c++/15.1.0/functional \
+ C:/mingw64/include/c++/15.1.0/bits/std_function.h \
+ C:/mingw64/include/c++/15.1.0/forward_list \
+ C:/mingw64/include/c++/15.1.0/bits/forward_list.h \
+ C:/mingw64/include/c++/15.1.0/bits/forward_list.tcc \
+ C:/mingw64/include/c++/15.1.0/map \
+ C:/mingw64/include/c++/15.1.0/bits/stl_tree.h \
+ C:/mingw64/include/c++/15.1.0/bits/stl_map.h \
+ C:/mingw64/include/c++/15.1.0/bits/stl_multimap.h \
+ C:/mingw64/include/c++/15.1.0/valarray \
+ C:/mingw64/include/c++/15.1.0/cmath \
+ C:/mingw64/x86_64-w64-mingw32/include/math.h \
+ C:/mingw64/include/c++/15.1.0/bits/specfun.h \
+ C:/mingw64/include/c++/15.1.0/tr1/gamma.tcc \
+ C:/mingw64/include/c++/15.1.0/tr1/special_function_util.h \
+ C:/mingw64/include/c++/15.1.0/tr1/bessel_function.tcc \
+ C:/mingw64/include/c++/15.1.0/tr1/beta_function.tcc \
+ C:/mingw64/include/c++/15.1.0/tr1/ell_integral.tcc \
+ C:/mingw64/include/c++/15.1.0/tr1/exp_integral.tcc \
+ C:/mingw64/include/c++/15.1.0/tr1/hypergeometric.tcc \
+ C:/mingw64/include/c++/15.1.0/tr1/legendre_function.tcc \
+ C:/mingw64/include/c++/15.1.0/tr1/modified_bessel_func.tcc \
+ C:/mingw64/include/c++/15.1.0/tr1/poly_hermite.tcc \
+ C:/mingw64/include/c++/15.1.0/tr1/poly_laguerre.tcc \
+ C:/mingw64/include/c++/15.1.0/tr1/riemann_zeta.tcc \
+ C:/mingw64/include/c++/15.1.0/bits/valarray_array.h \
+ C:/mingw64/include/c++/15.1.0/bits/valarray_array.tcc \
+ C:/mingw64/include/c++/15.1.0/bits/valarray_before.h \
+ C:/mingw64/include/c++/15.1.0/bits/slice_array.h \
+ C:/mingw64/include/c++/15.1.0/bits/valarray_after.h \
+ C:/mingw64/include/c++/15.1.0/bits/gslice.h \
+ C:/mingw64/include/c++/15.1.0/bits/gslice_array.h \
+ C:/mingw64/include/c++/15.1.0/bits/mask_array.h \
+ C:/mingw64/include/c++/15.1.0/bits/indirect_array.h \
+ C:/mingw64/include/c++/15.1.0/version \
+ C:/mingw64/include/c++/15.1.0/cstring \
+ C:/mingw64/x86_64-w64-mingw32/include/string.h \
+ C:/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h \
+ C:/mingw64/include/c++/15.1.0/ranges \
+ C:/mingw64/include/c++/15.1.0/numeric \
+ C:/mingw64/include/c++/15.1.0/bits/stl_numeric.h \
+ C:/mingw64/include/c++/15.1.0/pstl/glue_numeric_defs.h \
+ C:/mingw64/include/c++/15.1.0/any \
+ C:/Users/hugoa/Desktop/Runora/include/grid.hpp \
+ C:/Users/hugoa/Desktop/Runora/include/chunk.hpp \
+ C:/Users/hugoa/Desktop/Runora/include/texture.hpp \
+ C:/Users/hugoa/Desktop/Runora/include/map.hpp

@@ -1,1 +1,1 @@
--IC:/Users/hugoa/Desktop/Runora/include -isystem "C:/C__LIB~1/SFML-3~1.0/include"
+-IC:/C__LIB~1/JSON -IC:/Users/hugoa/Desktop/Runora/include -isystem "C:/C__LIB~1/SFML-3~1.0/include"

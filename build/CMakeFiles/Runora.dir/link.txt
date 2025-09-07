@@ -1,3 +1,3 @@
 "C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Runora.dir/objects.a
 C:\mingw64\bin\ar.exe qc CMakeFiles\Runora.dir/objects.a @CMakeFiles\Runora.dir\objects1.rsp
-C:\mingw64\bin\c++.exe -Wl,--whole-archive CMakeFiles\Runora.dir/objects.a -Wl,--no-whole-archive -o Runora.exe -Wl,--out-implib,libRunora.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Runora.dir\linkLibs.rsp
+C:\mingw64\bin\c++.exe -g -Wl,--whole-archive CMakeFiles\Runora.dir/objects.a -Wl,--no-whole-archive -o Runora.exe -Wl,--out-implib,libRunora.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Runora.dir\linkLibs.rsp
