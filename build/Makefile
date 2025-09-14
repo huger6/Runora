@@ -129,29 +129,53 @@ Runora/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/build
 .PHONY : Runora/fast
 
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
+src/app/Game/game.obj: src/app/Game/game.cpp.obj
+.PHONY : src/app/Game/game.obj
 
 # target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
+src/app/Game/game.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj
+.PHONY : src/app/Game/game.cpp.obj
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
+src/app/Game/game.i: src/app/Game/game.cpp.i
+.PHONY : src/app/Game/game.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+src/app/Game/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/app/Game/game.cpp.i
+.PHONY : src/app/Game/game.cpp.i
 
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
+src/app/Game/game.s: src/app/Game/game.cpp.s
+.PHONY : src/app/Game/game.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+src/app/Game/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/app/Game/game.cpp.s
+.PHONY : src/app/Game/game.cpp.s
+
+src/app/main.obj: src/app/main.cpp.obj
+.PHONY : src/app/main.obj
+
+# target to build an object file
+src/app/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/app/main.cpp.obj
+.PHONY : src/app/main.cpp.obj
+
+src/app/main.i: src/app/main.cpp.i
+.PHONY : src/app/main.i
+
+# target to preprocess a source file
+src/app/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/app/main.cpp.i
+.PHONY : src/app/main.cpp.i
+
+src/app/main.s: src/app/main.cpp.s
+.PHONY : src/app/main.s
+
+# target to generate assembly for a file
+src/app/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/app/main.cpp.s
+.PHONY : src/app/main.cpp.s
 
 # Help Target
 help:
@@ -162,9 +186,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Runora
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
+	@echo ... src/app/Game/game.obj
+	@echo ... src/app/Game/game.i
+	@echo ... src/app/Game/game.s
+	@echo ... src/app/main.obj
+	@echo ... src/app/main.i
+	@echo ... src/app/main.s
 .PHONY : help
 
 

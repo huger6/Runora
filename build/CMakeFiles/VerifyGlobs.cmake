@@ -4,7 +4,8 @@
 # SOURCES at CMakeLists.txt:26 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/hugoa/Desktop/Runora/src/*.cpp")
 set(OLD_GLOB
-  "C:/Users/hugoa/Desktop/Runora/src/main.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/app/Game/game.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/app/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

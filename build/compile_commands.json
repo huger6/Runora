@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\app\\Game\\game.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\app\\Game\\game.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/app/Game/game.cpp",
+  "output": "CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\app\\main.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\app\\main.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/app/main.cpp",
+  "output": "CMakeFiles/Runora.dir/src/app/main.cpp.obj"
+}
+]

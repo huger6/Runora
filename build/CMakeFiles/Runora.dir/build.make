@@ -71,29 +71,46 @@ include CMakeFiles/Runora.dir/flags.make
 CMakeFiles/Runora.dir/codegen:
 .PHONY : CMakeFiles/Runora.dir/codegen
 
-CMakeFiles/Runora.dir/src/main.cpp.obj: CMakeFiles/Runora.dir/flags.make
-CMakeFiles/Runora.dir/src/main.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
-CMakeFiles/Runora.dir/src/main.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/main.cpp
-CMakeFiles/Runora.dir/src/main.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Runora.dir/src/main.cpp.obj"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/main.cpp.obj -MF CMakeFiles\Runora.dir\src\main.cpp.obj.d -o CMakeFiles\Runora.dir\src\main.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\main.cpp
+CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/app/Game/game.cpp
+CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj -MF CMakeFiles\Runora.dir\src\app\Game\game.cpp.obj.d -o CMakeFiles\Runora.dir\src\app\Game\game.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\app\Game\game.cpp
 
-CMakeFiles/Runora.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/main.cpp.i"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\main.cpp > CMakeFiles\Runora.dir\src\main.cpp.i
+CMakeFiles/Runora.dir/src/app/Game/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/app/Game/game.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\app\Game\game.cpp > CMakeFiles\Runora.dir\src\app\Game\game.cpp.i
 
-CMakeFiles/Runora.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/main.cpp.s"
-	C:\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\main.cpp -o CMakeFiles\Runora.dir\src\main.cpp.s
+CMakeFiles/Runora.dir/src/app/Game/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/app/Game/game.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\app\Game\game.cpp -o CMakeFiles\Runora.dir\src\app\Game\game.cpp.s
+
+CMakeFiles/Runora.dir/src/app/main.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/app/main.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/app/main.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/app/main.cpp
+CMakeFiles/Runora.dir/src/app/main.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Runora.dir/src/app/main.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/app/main.cpp.obj -MF CMakeFiles\Runora.dir\src\app\main.cpp.obj.d -o CMakeFiles\Runora.dir\src\app\main.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\app\main.cpp
+
+CMakeFiles/Runora.dir/src/app/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/app/main.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\app\main.cpp > CMakeFiles\Runora.dir\src\app\main.cpp.i
+
+CMakeFiles/Runora.dir/src/app/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/app/main.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\app\main.cpp -o CMakeFiles\Runora.dir\src\app\main.cpp.s
 
 # Object files for target Runora
 Runora_OBJECTS = \
-"CMakeFiles/Runora.dir/src/main.cpp.obj"
+"CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj" \
+"CMakeFiles/Runora.dir/src/app/main.cpp.obj"
 
 # External object files for target Runora
 Runora_EXTERNAL_OBJECTS =
 
-Runora.exe: CMakeFiles/Runora.dir/src/main.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/app/main.cpp.obj
 Runora.exe: CMakeFiles/Runora.dir/build.make
 Runora.exe: C:/C++\ Libraries/SFML-3.0.0/lib/libsfml-graphics-s-d.a
 Runora.exe: C:/C++\ Libraries/SFML-3.0.0/lib/libsfml-window-s-d.a
@@ -102,7 +119,7 @@ Runora.exe: C:/C++\ Libraries/SFML-3.0.0/lib/libfreetyped.a
 Runora.exe: CMakeFiles/Runora.dir/linkLibs.rsp
 Runora.exe: CMakeFiles/Runora.dir/objects1.rsp
 Runora.exe: CMakeFiles/Runora.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Runora.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Runora.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Runora.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

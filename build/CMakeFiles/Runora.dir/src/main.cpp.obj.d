@@ -368,4 +368,5 @@ CMakeFiles/Runora.dir/src/main.cpp.obj: \
  C:/Users/hugoa/Desktop/Runora/include/grid.hpp \
  C:/Users/hugoa/Desktop/Runora/include/chunk.hpp \
  C:/Users/hugoa/Desktop/Runora/include/texture.hpp \
- C:/Users/hugoa/Desktop/Runora/include/map.hpp
+ C:/Users/hugoa/Desktop/Runora/include/map.hpp \
+ C:/Users/hugoa/Desktop/Runora/include/player.hpp

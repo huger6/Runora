@@ -1,1 +1,0 @@
- "C:/C++ Libraries/SFML-3.0.0/lib/libsfml-graphics-s-d.a" "C:/C++ Libraries/SFML-3.0.0/lib/libsfml-window-s-d.a" "C:/C++ Libraries/SFML-3.0.0/lib/libsfml-system-s-d.a" -lopengl32 -lwinmm -lgdi32 "C:/C++ Libraries/SFML-3.0.0/lib/libfreetyped.a" -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
