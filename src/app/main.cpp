@@ -5,22 +5,18 @@
 #include <HUD/button.hpp>
 #include <World/tile.hpp>
 #include <Utils/getters.hpp>
-#include <World/grid.hpp>
+#include <World/terrainGenerator.hpp>
 #include <World/map.hpp>
 #include <Player/player.hpp>
 
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode({MapConfigs::SCREEN_SIZE_X, MapConfigs::SCREEN_SIZE_Y}), "Runora", sf::Style::Titlebar | sf::Style::Close);
-    window.setVerticalSyncEnabled(false);
-    window.setFramerateLimit(60);
-
     GameState state = GameState::MAIN_MENU;
     GameState lastDifferentState = GameState::MAIN_MENU; // Necessary for options menu callback
     GameState lastState = GameState::MAIN_MENU;
 
     bool firstTimePlaying = true;
-
+    
     MainMenu mainMenu(window);
     PauseMenu pauseMenu(window);
 
@@ -30,7 +26,7 @@ int main() {
     registry.loadFromJSON(getTilesetJSONPath());
     
     // Grid
-    Grid grid(registry);
+    TerrainGenerator grid(registry);
     
     // Player position
     Player player;

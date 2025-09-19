@@ -1,13 +1,14 @@
 #pragma once
 
 #include <iostream>
+#include <vector>
 #include <SFML/Graphics.hpp>
 #include <World/chunk.hpp>
 #include <Graphics/texture.hpp>
 #include <Utils/getters.hpp>
 
 
-class Grid {
+class TerrainGenerator {
     private:
         std::unordered_map<sf::Vector2i, std::unique_ptr<Chunk>, Vector2iHash> map;
         TextureManager manager;
@@ -15,14 +16,6 @@ class Grid {
 
         const sf::Vector2i getChunkCoords(const sf::Vector2f& coords) const {
             return {static_cast<int>(floor(coords.x / (TileConfigs::CHUNK_WIDTH * TileConfigs::TILE_SIZE))), static_cast<int>(floor(coords.y / (TileConfigs::CHUNK_HEIGHT * TileConfigs::TILE_SIZE)))};
-        }
-    public:
-        uint16_t activeRadiusX_front; // Number of chunks to have loaded in front of the player
-        uint16_t activeRadiusX_back;
-        uint16_t activeRadiusY;
-
-        Grid(TileRegistry& registry) : registry(registry), activeRadiusX_front(ChunkConfigs::CHUNKS_FRONT_RADIUS), activeRadiusX_back(ChunkConfigs::CHUNKS_BACK_RADIUS), activeRadiusY(ChunkConfigs::CHUNKS_RADIUS_Y) {
-            manager.loadTileset(getTilesetPath());
         }
 
         void loadChunk(const sf::Vector2f& playerPos) {
@@ -85,6 +78,19 @@ class Grid {
                 }
             }
         }
+    
+    public:
+        uint16_t activeRadiusX_front; // Number of chunks to have loaded in front of the player
+        uint16_t activeRadiusX_back;
+        uint16_t activeRadiusY;
+
+        TerrainGenerator(TileRegistry& registry) : registry(registry), activeRadiusX_front(ChunkConfigs::CHUNKS_FRONT_RADIUS), activeRadiusX_back(ChunkConfigs::CHUNKS_BACK_RADIUS), activeRadiusY(ChunkConfigs::CHUNKS_RADIUS_Y) {
+            manager.loadTileset(getTilesetPath());
+        }
+
+        void update(const sf::Vector2f& playerPos) {
+            updateChunks(playerPos);
+        }
 
         void draw(sf::RenderWindow& window) {
             for (auto& [coords, chunk] : map) {
@@ -103,5 +109,14 @@ class Grid {
 
         void clear() {
             map.clear();
+        }
+
+        const std::vector<float>& getBoundingLimitsX(const sf::Vector2f playerPos) {
+            std::vector<float> limits;
+
+            limits.push_back(activeRadiusX_back * 1.5f);
+            limits.push_back(activeRadiusX_front * 1.2f);
+
+            return limits;
         }
 };

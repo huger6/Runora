@@ -1,51 +1,42 @@
 #pragma once
 
 #include <iostream>
+#include <random>
 #include <SFML/Graphics.hpp>
 #include <World/map.hpp>
 #include <getters.hpp>
 
 namespace OrbConfigs {
     float ORB_RADIUS = 22.0f;
+    float ORB_SPAWN_PROBABILITY = .2f;
 }
 
 class Orb {
+    public:
+        Orb();
+
+        void drawHitbox(sf::RenderWindow& window);
+
+        void update(bool collected);
+        void draw(sf::RenderWindow& window);
     private:
-        uint32_t orbsCollected;
-        std::unordered_map<sf::Vector2i, uint32_t, Vector2iHash> activeOrbs;
+        bool collected;
         sf::Sprite orbSprite;
         sf::CircleShape hitbox;
+    
+        void setHibbox();
+};
 
-        bool generateOrb(uint32_t tileX, uint32_t tileY) {
-            
-        }
 
+class OrbManager {
     public:
-        Orb() : orbsCollected(0), orbSprite(getAuraOrbTexture()) {
-            this->setHibbox(); // Debug
-        }
+        bool generateOrb(uint32_t tileX, uint32_t tileY);
+        bool spawnOrb(float probability);
 
-        void setHibbox() {
-            hitbox.setRadius(OrbConfigs::ORB_RADIUS);
-            hitbox.setOrigin({hitbox.getLocalBounds().size.x / 2.0f, hitbox.getLocalBounds().size.y});
-           
-            hitbox.setFillColor(sf::Color::Transparent);
-            hitbox.setOutlineThickness(1.0f);
-            hitbox.setOutlineColor(sf::Color::Red);
-        }
+        void drawHitbox(sf::RenderWindow& window);
 
-        void drawHitbox(sf::RenderWindow& window) {
-            for (auto orb = activeOrbs.begin(); orb != activeOrbs.end(); orb++) {
-                hitbox.setPosition({static_cast<float>(orb->first.x), static_cast<float>(orb->first.y)});
-                window.draw(hitbox);
-            }
-        }
-
-        void draw(sf::RenderWindow& window) {
-            for (auto orb = activeOrbs.begin(); orb != activeOrbs.end(); orb++) {
-                orbSprite.setPosition({static_cast<float>(orb->first.x), static_cast<float>(orb->first.y)});
-                window.draw(orbSprite);
-            }
-            
-        }
+        void update(sf::Vector2f playerPos);
+        void draw(sf::RenderWindow& window);
+    private:
+        std::unordered_map<sf::Vector2i, uint32_t, Vector2iHash> activeOrbs;
 };

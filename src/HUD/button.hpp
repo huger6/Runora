@@ -1,13 +1,15 @@
 #pragma once
 
 #include <iostream>
+// SFML
 #include <SFML/Graphics.hpp>
+// Utils
 #include <Utils/utils.hpp>
 
 class KeyClicked {
-    private:
-        static inline std::array<bool, sf::Keyboard::KeyCount> wasPressed{};
     public:
+        KeyClicked();
+
         static bool isKeyClicked(sf::Keyboard::Key key) {
             bool pressed = sf::Keyboard::isKeyPressed(key);
 
@@ -21,12 +23,14 @@ class KeyClicked {
 
             return false;
         }
+    private:
+        static inline std::array<bool, sf::Keyboard::KeyCount> wasPressed{};
 };
 
 class MouseClicked {
-    private:
-        static inline std::array<bool, sf::Mouse::ButtonCount> wasPressed{};
     public:
+        MouseClicked();
+
         static bool isBtnClicked(sf::Mouse::Button btn) {
             bool pressed = sf::Mouse::isButtonPressed(btn);
 
@@ -40,17 +44,13 @@ class MouseClicked {
 
             return false;
         }
+    private:
+        static inline std::array<bool, sf::Mouse::ButtonCount> wasPressed{};
 };
 
 class Button {
-    private:
-        sf::RectangleShape shape;
-        sf::Color bgColor;  
-        sf::Color textColor;
-        sf::Color hoverColor;
-        sf::Text text;
     public:
-        Button() = default;
+        Button();
         
         Button(const sf::Vector2f& size, unsigned int textSize, const sf::Vector2f& position, const sf::Font& font, const std::string& label, const sf::Color& bgColor, const sf::Color& textColor, const sf::Color& hoverColor)
         : bgColor(bgColor), textColor(textColor), hoverColor(hoverColor), text(font) {
@@ -65,33 +65,20 @@ class Button {
             text.setOrigin(text.getLocalBounds().getCenter());
             text.setPosition(position);
         }
+        
+        void changeLabel(std::string& newLabel);
 
-        void draw(sf::RenderWindow& window) {
-            window.draw(shape);
-            window.draw(text);
-        }
+        bool isHovered(const sf::RenderWindow& window);
+        bool isClicked(const sf::RenderWindow& window);
+        void update(sf::RenderWindow& window);
+        void draw(sf::RenderWindow& window);
 
-        bool isHovered(const sf::RenderWindow& window) {
-            sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
-            sf::Vector2f posInFloat = {static_cast<float>(mousePosition.x), static_cast<float>(mousePosition.y)};
-            return shape.getGlobalBounds().contains(posInFloat);
-        }
 
-        void update(sf::RenderWindow& window) {
-            if (isHovered(window)) {
-                shape.setFillColor(hoverColor);
-            }
-            else {
-                shape.setFillColor(bgColor);
-            }
-        }
 
-        bool isClicked(const sf::RenderWindow& window) {
-            return isHovered(window) && MouseClicked::isBtnClicked(sf::Mouse::Button::Left);
-        }
-
-        void changeLabel(std::string& newLabel) {
-            text.setString(newLabel);
-            text.setOrigin(text.getLocalBounds().getCenter());
-        }
+    private:
+        sf::RectangleShape shape;
+        sf::Color bgColor;  
+        sf::Color textColor;
+        sf::Color hoverColor;
+        sf::Text text;
 };
