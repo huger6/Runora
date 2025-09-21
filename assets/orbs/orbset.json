@@ -1,0 +1,10 @@
+{
+    "orbs": [
+        {
+            "id": 1,
+            "name": "orb-collectable",
+            "textureX": 0,
+            "textureY": 0
+        }
+    ]
+}

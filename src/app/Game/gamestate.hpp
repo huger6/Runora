@@ -18,15 +18,17 @@ class GameStateManager {
     public:
         GameStateManager(sf::RenderWindow& window);
 
-        GameState getCurrentState();
+        GameState getCurrentState() const;
+        GameState getLastDifferentState() const;
         void setCurrentState(GameState newState);
         bool isPlaying();
 
         void update(sf::RenderWindow& window);
+        void draw(sf::RenderWindow& window);
     private:
         GameState currentState = GameState::MAIN_MENU;
         GameState lastDifferentState = GameState::MAIN_MENU;
         
         MainMenu mainMenu;
         PauseMenu pauseMenu;
-}
+};

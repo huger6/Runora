@@ -1,20 +1,22 @@
-#include <menu.hpp>
-#include <Utils/getters.hpp>
+#include "menu.hpp"
+// Getters
+#include "Utils/getters.hpp"
 
 
 // Public
 
+// I apologize in advance for what you're about to see
 
 MainMenu::MainMenu(sf::RenderWindow& window) :
-    name(getFont()), 
-    copyright(getFont()), 
-    bgColor(30, 139, 234), 
-    centerPosition(window.getSize().x / 2.0f, window.getSize().y / 2.0f), 
-    bgTexture(getBackgroundTexture()),
+    centerPosition(window.getSize().x / 2.0f, window.getSize().y / 2.0f),
+    bgColor(30, 139, 234),
     startBtn({200.0f, 60.0f}, 40, centerPosition, getFont(), "START", bgColor, sf::Color::Black, sf::Color::White),
     optionsBtn({200.0f, 60.0f}, 40, {centerPosition.x, centerPosition.y + 80.0f}, getFont(), "OPTIONS", bgColor, sf::Color::Black, sf::Color::White),
-    quitBtn({200.0f, 60.0f}, 40, {centerPosition.x, centerPosition.y + 160.0f}, getFont(), "QUIT", bgColor, sf::Color::Black, sf::Color::White), 
-    background(bgTexture) {
+    quitBtn({200.0f, 60.0f}, 40, {centerPosition.x, centerPosition.y + 160.0f}, getFont(), "QUIT", bgColor, sf::Color::Black, sf::Color::White),
+    background(getBackgroundTexture()),
+    name(getFont()), 
+    copyright(getFont())
+     {
         bgTexture = getBackgroundTexture();
 
         sf::Vector2u windowSize = window.getSize();
@@ -46,15 +48,6 @@ Button* MainMenu::getClickedButton(sf::RenderWindow& window) {
     return nullptr;
 }
 
-void MainMenu::draw(sf::RenderWindow& window) {
-    window.draw(background);
-    window.draw(name);
-    window.draw(copyright);
-    startBtn.draw(window);
-    optionsBtn.draw(window);
-    quitBtn.draw(window);
-}
-
 void MainMenu::update(sf::RenderWindow& window) {
     bool anyHover = false;
 
@@ -68,6 +61,15 @@ void MainMenu::update(sf::RenderWindow& window) {
     
     if (anyHover) setMouseAsHand(window);
     else setMouseAsArrow(window);
+}
+
+void MainMenu::draw(sf::RenderWindow& window) {
+    window.draw(background);
+    window.draw(name);
+    window.draw(copyright);     
+    startBtn.draw(window);
+    optionsBtn.draw(window);
+    quitBtn.draw(window);
 }
 
 
@@ -111,3 +113,4 @@ void PauseMenu::draw(sf::RenderWindow& window) {
     optionsBtn.draw(window);
     returnToMenuBtn.draw(window);
 }
+

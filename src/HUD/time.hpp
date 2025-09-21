@@ -19,11 +19,11 @@ class GameTimer {
         inline std::string getElapsedFormatted();
         sf::Time getElapsed() const;
 
+        void update(bool playing);
         void draw(sf::RenderWindow& window, sf::View& camera);
     private:
         sf::Clock clock;
         sf::Text time;
-        
 
         void setTimerPosition(sf::View& camera);
 };

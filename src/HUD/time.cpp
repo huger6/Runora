@@ -1,11 +1,12 @@
-#include <time.hpp>
-#include <Utils/getters.hpp>
+#include "time.hpp"
+// Utils
+#include "Utils/getters.hpp"
 
 
 // Public
 
 
-explicit GameTimer::GameTimer() : time(getFont()) {
+GameTimer::GameTimer() : time(getFont()) {
     clock.start();
 
     time.setFillColor(sf::Color::Red);
@@ -52,6 +53,11 @@ inline std::string GameTimer::getElapsedFormatted() {
 
     if (hours > 99) return std::string("");
     return std::format("{:02}:{:02}:{:02}", hours, mins, secs);
+}
+
+void GameTimer::update(bool playing) {
+    if (playing && !clock.isRunning()) clock.start();
+    else if (!playing) clock.stop();
 }
 
 void GameTimer::draw(sf::RenderWindow& window, sf::View& camera) {

@@ -17,7 +17,6 @@ class OrbCounter {
 
         uint32_t getTotalOrbs() const;
 
-
         void update(uint32_t orbsToAdd);
         void draw(sf::RenderWindow& window, sf::View& view);
 };

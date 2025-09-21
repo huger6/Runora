@@ -2,6 +2,8 @@
 
 #include <iostream>
 #include <format>
+#include <random>
+// SFML
 #include <SFML/Graphics.hpp>
 
 
@@ -39,4 +41,12 @@ inline std::string capitalize(const std::string& input) {
         result[i] = std::tolower(static_cast<unsigned char>(result[i]));
     }
     return result;
+}
+
+inline uint32_t randomInt(uint32_t less, uint32_t greater) {
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> dist(less, greater);
+
+    return dist(gen);
 }

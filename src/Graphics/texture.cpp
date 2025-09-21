@@ -1,4 +1,4 @@
-#include <texture.hpp>
+#include "texture.hpp"
 
 
 // Public
@@ -6,11 +6,11 @@
 
 TextureManager::TextureManager() = default;
 
-void TextureManager::loadTileset(const std::string& path) {
-    if (!tileset.loadFromFile(path))
+void TextureManager::loadSet(const std::string& path) {
+    if (!set.loadFromFile(path))
         std::cout << "Failed to load tileset";
 }
 
-const sf::Texture& TextureManager::getTileset() const { return tileset; }
+const sf::Texture& TextureManager::getSet() const { return set; }
 
-const sf::Texture* TextureManager::getTilesetPtr() const { return &tileset; }
+const sf::Texture* TextureManager::getSetPtr() const { return &set; }

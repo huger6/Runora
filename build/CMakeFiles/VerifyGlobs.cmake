@@ -4,7 +4,20 @@
 # SOURCES at CMakeLists.txt:26 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/hugoa/Desktop/Runora/src/*.cpp")
 set(OLD_GLOB
+  "C:/Users/hugoa/Desktop/Runora/src/Graphics/texture.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/HUD/button.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/HUD/hud.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/HUD/menu.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/HUD/orbCounter.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/HUD/time.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/Player/player.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/World/chunk.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/World/orb.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/World/orbGenerator.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/World/terrainGenerator.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/World/tile.cpp"
   "C:/Users/hugoa/Desktop/Runora/src/app/Game/game.cpp"
+  "C:/Users/hugoa/Desktop/Runora/src/app/Game/gamestate.cpp"
   "C:/Users/hugoa/Desktop/Runora/src/app/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

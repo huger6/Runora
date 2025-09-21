@@ -1,4 +1,4 @@
-#include <hud.hpp>
+#include "hud.hpp"
 
 
 // Public
@@ -10,7 +10,12 @@ sf::Time HUD::getElapsed() const { return timer.getElapsed(); }
 
 uint32_t HUD::getTotalOrbs() const { return orbs.getTotalOrbs(); }
 
-void HUD::update(uint32_t orbsToAdd) {
+void HUD::resetTimer() {
+    timer.reset();
+}
+
+void HUD::update(uint32_t orbsToAdd, bool playing) {
+    timer.update(playing);
     orbs.update(orbsToAdd);
 }
 

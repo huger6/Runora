@@ -6,9 +6,9 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 // Timer
-#include <time.hpp>
+#include "time.hpp"
 // Orbs
-#include <orbCounter.hpp>
+#include "orbCounter.hpp"
 
 
 class HUD {
@@ -18,7 +18,9 @@ class HUD {
         sf::Time getElapsed() const;
         uint32_t getTotalOrbs() const;
 
-        void update(uint32_t orbsToAdd);
+        void resetTimer();
+
+        void update(uint32_t orbsToAdd, bool playing);
         void draw(sf::RenderWindow& window, sf::View& camera);
     private:
         GameTimer timer;

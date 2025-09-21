@@ -1,6 +1,6 @@
-#include <player.hpp>
+#include "player.hpp"
 // MapConfigs
-#include <World/map.hpp>
+#include "World/map.hpp"
 
 
 // Public
@@ -51,8 +51,8 @@ void Player::setHibbox() {
     hitbox.setOutlineColor(sf::Color::Red);
 }
 
-const sf::RectangleShape& Player::getHitbox() const {
-    return hitbox;
+const sf::FloatRect& Player::getHitbox() const {
+    return hitbox.getGlobalBounds();
 }
 
 void Player::drawHitbox(sf::RenderWindow& window) {

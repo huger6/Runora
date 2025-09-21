@@ -9,11 +9,11 @@ class TextureManager {
     public:
         TextureManager();
 
-        void loadTileset(const std::string& path);
+        void loadSet(const std::string& path);
 
-        const sf::Texture& getTileset() const;
+        const sf::Texture& getSet() const;
 
-        const sf::Texture* getTilesetPtr() const;
+        const sf::Texture* getSetPtr() const;
     private:
-        sf::Texture tileset;
+        sf::Texture set;
 };

@@ -4,9 +4,9 @@
 // SFML
 #include <SFML/Graphics.hpp>
 // Tile
-#include <World/tile.hpp>
+#include "World/tile.hpp"
 // Utils
-#include <Utils/getters.hpp>
+#include "Utils/getters.hpp"
 
 namespace PlayerConfigs {
     constexpr float PLAYER_SCALE_WIDTH = 2.0f;
@@ -30,7 +30,7 @@ class Player {
         void checkMovement();
 
         void setHibbox();
-        const sf::RectangleShape& getHitbox() const;
+        const sf::FloatRect& getHitbox() const;
         void drawHitbox(sf::RenderWindow& window);
 
         void update();

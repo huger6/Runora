@@ -129,6 +129,294 @@ Runora/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/build
 .PHONY : Runora/fast
 
+src/Graphics/texture.obj: src/Graphics/texture.cpp.obj
+.PHONY : src/Graphics/texture.obj
+
+# target to build an object file
+src/Graphics/texture.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/Graphics/texture.cpp.obj
+.PHONY : src/Graphics/texture.cpp.obj
+
+src/Graphics/texture.i: src/Graphics/texture.cpp.i
+.PHONY : src/Graphics/texture.i
+
+# target to preprocess a source file
+src/Graphics/texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/Graphics/texture.cpp.i
+.PHONY : src/Graphics/texture.cpp.i
+
+src/Graphics/texture.s: src/Graphics/texture.cpp.s
+.PHONY : src/Graphics/texture.s
+
+# target to generate assembly for a file
+src/Graphics/texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/Graphics/texture.cpp.s
+.PHONY : src/Graphics/texture.cpp.s
+
+src/HUD/button.obj: src/HUD/button.cpp.obj
+.PHONY : src/HUD/button.obj
+
+# target to build an object file
+src/HUD/button.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/button.cpp.obj
+.PHONY : src/HUD/button.cpp.obj
+
+src/HUD/button.i: src/HUD/button.cpp.i
+.PHONY : src/HUD/button.i
+
+# target to preprocess a source file
+src/HUD/button.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/button.cpp.i
+.PHONY : src/HUD/button.cpp.i
+
+src/HUD/button.s: src/HUD/button.cpp.s
+.PHONY : src/HUD/button.s
+
+# target to generate assembly for a file
+src/HUD/button.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/button.cpp.s
+.PHONY : src/HUD/button.cpp.s
+
+src/HUD/hud.obj: src/HUD/hud.cpp.obj
+.PHONY : src/HUD/hud.obj
+
+# target to build an object file
+src/HUD/hud.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/hud.cpp.obj
+.PHONY : src/HUD/hud.cpp.obj
+
+src/HUD/hud.i: src/HUD/hud.cpp.i
+.PHONY : src/HUD/hud.i
+
+# target to preprocess a source file
+src/HUD/hud.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/hud.cpp.i
+.PHONY : src/HUD/hud.cpp.i
+
+src/HUD/hud.s: src/HUD/hud.cpp.s
+.PHONY : src/HUD/hud.s
+
+# target to generate assembly for a file
+src/HUD/hud.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/hud.cpp.s
+.PHONY : src/HUD/hud.cpp.s
+
+src/HUD/menu.obj: src/HUD/menu.cpp.obj
+.PHONY : src/HUD/menu.obj
+
+# target to build an object file
+src/HUD/menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/menu.cpp.obj
+.PHONY : src/HUD/menu.cpp.obj
+
+src/HUD/menu.i: src/HUD/menu.cpp.i
+.PHONY : src/HUD/menu.i
+
+# target to preprocess a source file
+src/HUD/menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/menu.cpp.i
+.PHONY : src/HUD/menu.cpp.i
+
+src/HUD/menu.s: src/HUD/menu.cpp.s
+.PHONY : src/HUD/menu.s
+
+# target to generate assembly for a file
+src/HUD/menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/menu.cpp.s
+.PHONY : src/HUD/menu.cpp.s
+
+src/HUD/orbCounter.obj: src/HUD/orbCounter.cpp.obj
+.PHONY : src/HUD/orbCounter.obj
+
+# target to build an object file
+src/HUD/orbCounter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.obj
+.PHONY : src/HUD/orbCounter.cpp.obj
+
+src/HUD/orbCounter.i: src/HUD/orbCounter.cpp.i
+.PHONY : src/HUD/orbCounter.i
+
+# target to preprocess a source file
+src/HUD/orbCounter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.i
+.PHONY : src/HUD/orbCounter.cpp.i
+
+src/HUD/orbCounter.s: src/HUD/orbCounter.cpp.s
+.PHONY : src/HUD/orbCounter.s
+
+# target to generate assembly for a file
+src/HUD/orbCounter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.s
+.PHONY : src/HUD/orbCounter.cpp.s
+
+src/HUD/time.obj: src/HUD/time.cpp.obj
+.PHONY : src/HUD/time.obj
+
+# target to build an object file
+src/HUD/time.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/time.cpp.obj
+.PHONY : src/HUD/time.cpp.obj
+
+src/HUD/time.i: src/HUD/time.cpp.i
+.PHONY : src/HUD/time.i
+
+# target to preprocess a source file
+src/HUD/time.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/time.cpp.i
+.PHONY : src/HUD/time.cpp.i
+
+src/HUD/time.s: src/HUD/time.cpp.s
+.PHONY : src/HUD/time.s
+
+# target to generate assembly for a file
+src/HUD/time.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/HUD/time.cpp.s
+.PHONY : src/HUD/time.cpp.s
+
+src/Player/player.obj: src/Player/player.cpp.obj
+.PHONY : src/Player/player.obj
+
+# target to build an object file
+src/Player/player.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/Player/player.cpp.obj
+.PHONY : src/Player/player.cpp.obj
+
+src/Player/player.i: src/Player/player.cpp.i
+.PHONY : src/Player/player.i
+
+# target to preprocess a source file
+src/Player/player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/Player/player.cpp.i
+.PHONY : src/Player/player.cpp.i
+
+src/Player/player.s: src/Player/player.cpp.s
+.PHONY : src/Player/player.s
+
+# target to generate assembly for a file
+src/Player/player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/Player/player.cpp.s
+.PHONY : src/Player/player.cpp.s
+
+src/World/chunk.obj: src/World/chunk.cpp.obj
+.PHONY : src/World/chunk.obj
+
+# target to build an object file
+src/World/chunk.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/chunk.cpp.obj
+.PHONY : src/World/chunk.cpp.obj
+
+src/World/chunk.i: src/World/chunk.cpp.i
+.PHONY : src/World/chunk.i
+
+# target to preprocess a source file
+src/World/chunk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/chunk.cpp.i
+.PHONY : src/World/chunk.cpp.i
+
+src/World/chunk.s: src/World/chunk.cpp.s
+.PHONY : src/World/chunk.s
+
+# target to generate assembly for a file
+src/World/chunk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/chunk.cpp.s
+.PHONY : src/World/chunk.cpp.s
+
+src/World/orb.obj: src/World/orb.cpp.obj
+.PHONY : src/World/orb.obj
+
+# target to build an object file
+src/World/orb.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/orb.cpp.obj
+.PHONY : src/World/orb.cpp.obj
+
+src/World/orb.i: src/World/orb.cpp.i
+.PHONY : src/World/orb.i
+
+# target to preprocess a source file
+src/World/orb.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/orb.cpp.i
+.PHONY : src/World/orb.cpp.i
+
+src/World/orb.s: src/World/orb.cpp.s
+.PHONY : src/World/orb.s
+
+# target to generate assembly for a file
+src/World/orb.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/orb.cpp.s
+.PHONY : src/World/orb.cpp.s
+
+src/World/orbGenerator.obj: src/World/orbGenerator.cpp.obj
+.PHONY : src/World/orbGenerator.obj
+
+# target to build an object file
+src/World/orbGenerator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.obj
+.PHONY : src/World/orbGenerator.cpp.obj
+
+src/World/orbGenerator.i: src/World/orbGenerator.cpp.i
+.PHONY : src/World/orbGenerator.i
+
+# target to preprocess a source file
+src/World/orbGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.i
+.PHONY : src/World/orbGenerator.cpp.i
+
+src/World/orbGenerator.s: src/World/orbGenerator.cpp.s
+.PHONY : src/World/orbGenerator.s
+
+# target to generate assembly for a file
+src/World/orbGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.s
+.PHONY : src/World/orbGenerator.cpp.s
+
+src/World/terrainGenerator.obj: src/World/terrainGenerator.cpp.obj
+.PHONY : src/World/terrainGenerator.obj
+
+# target to build an object file
+src/World/terrainGenerator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.obj
+.PHONY : src/World/terrainGenerator.cpp.obj
+
+src/World/terrainGenerator.i: src/World/terrainGenerator.cpp.i
+.PHONY : src/World/terrainGenerator.i
+
+# target to preprocess a source file
+src/World/terrainGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.i
+.PHONY : src/World/terrainGenerator.cpp.i
+
+src/World/terrainGenerator.s: src/World/terrainGenerator.cpp.s
+.PHONY : src/World/terrainGenerator.s
+
+# target to generate assembly for a file
+src/World/terrainGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.s
+.PHONY : src/World/terrainGenerator.cpp.s
+
+src/World/tile.obj: src/World/tile.cpp.obj
+.PHONY : src/World/tile.obj
+
+# target to build an object file
+src/World/tile.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/tile.cpp.obj
+.PHONY : src/World/tile.cpp.obj
+
+src/World/tile.i: src/World/tile.cpp.i
+.PHONY : src/World/tile.i
+
+# target to preprocess a source file
+src/World/tile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/tile.cpp.i
+.PHONY : src/World/tile.cpp.i
+
+src/World/tile.s: src/World/tile.cpp.s
+.PHONY : src/World/tile.s
+
+# target to generate assembly for a file
+src/World/tile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/World/tile.cpp.s
+.PHONY : src/World/tile.cpp.s
+
 src/app/Game/game.obj: src/app/Game/game.cpp.obj
 .PHONY : src/app/Game/game.obj
 
@@ -152,6 +440,30 @@ src/app/Game/game.s: src/app/Game/game.cpp.s
 src/app/Game/game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/app/Game/game.cpp.s
 .PHONY : src/app/Game/game.cpp.s
+
+src/app/Game/gamestate.obj: src/app/Game/gamestate.cpp.obj
+.PHONY : src/app/Game/gamestate.obj
+
+# target to build an object file
+src/app/Game/gamestate.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.obj
+.PHONY : src/app/Game/gamestate.cpp.obj
+
+src/app/Game/gamestate.i: src/app/Game/gamestate.cpp.i
+.PHONY : src/app/Game/gamestate.i
+
+# target to preprocess a source file
+src/app/Game/gamestate.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.i
+.PHONY : src/app/Game/gamestate.cpp.i
+
+src/app/Game/gamestate.s: src/app/Game/gamestate.cpp.s
+.PHONY : src/app/Game/gamestate.s
+
+# target to generate assembly for a file
+src/app/Game/gamestate.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.s
+.PHONY : src/app/Game/gamestate.cpp.s
 
 src/app/main.obj: src/app/main.cpp.obj
 .PHONY : src/app/main.obj
@@ -186,9 +498,48 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Runora
+	@echo ... src/Graphics/texture.obj
+	@echo ... src/Graphics/texture.i
+	@echo ... src/Graphics/texture.s
+	@echo ... src/HUD/button.obj
+	@echo ... src/HUD/button.i
+	@echo ... src/HUD/button.s
+	@echo ... src/HUD/hud.obj
+	@echo ... src/HUD/hud.i
+	@echo ... src/HUD/hud.s
+	@echo ... src/HUD/menu.obj
+	@echo ... src/HUD/menu.i
+	@echo ... src/HUD/menu.s
+	@echo ... src/HUD/orbCounter.obj
+	@echo ... src/HUD/orbCounter.i
+	@echo ... src/HUD/orbCounter.s
+	@echo ... src/HUD/time.obj
+	@echo ... src/HUD/time.i
+	@echo ... src/HUD/time.s
+	@echo ... src/Player/player.obj
+	@echo ... src/Player/player.i
+	@echo ... src/Player/player.s
+	@echo ... src/World/chunk.obj
+	@echo ... src/World/chunk.i
+	@echo ... src/World/chunk.s
+	@echo ... src/World/orb.obj
+	@echo ... src/World/orb.i
+	@echo ... src/World/orb.s
+	@echo ... src/World/orbGenerator.obj
+	@echo ... src/World/orbGenerator.i
+	@echo ... src/World/orbGenerator.s
+	@echo ... src/World/terrainGenerator.obj
+	@echo ... src/World/terrainGenerator.i
+	@echo ... src/World/terrainGenerator.s
+	@echo ... src/World/tile.obj
+	@echo ... src/World/tile.i
+	@echo ... src/World/tile.s
 	@echo ... src/app/Game/game.obj
 	@echo ... src/app/Game/game.i
 	@echo ... src/app/Game/game.s
+	@echo ... src/app/Game/gamestate.obj
+	@echo ... src/app/Game/gamestate.i
+	@echo ... src/app/Game/gamestate.s
 	@echo ... src/app/main.obj
 	@echo ... src/app/main.i
 	@echo ... src/app/main.s

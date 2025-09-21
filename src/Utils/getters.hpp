@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+// SFML
 #include <SFML/Graphics.hpp>
 
 
@@ -86,5 +87,15 @@ inline const std::string& getTilesetPath() {
 
 inline const std::string& getTilesetJSONPath() {
     static const std::string path = "assets/tileset/tileset.json";
+    return path;
+}
+
+inline const std::string& getOrbsetJSONPath() {
+    static const std::string path = "assets/orbs/orbset.json";
+    return path;
+}
+
+inline const std::string& getOrbPath() {
+    static const std::string path = "assets/orbs/orbset.png";
     return path;
 }

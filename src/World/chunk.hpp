@@ -5,10 +5,10 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/System.hpp>
 // World
-#include <World/tile.hpp>
-#include <World/map.hpp>
+#include "World/tile.hpp"
+#include "World/map.hpp"
 // Graphics
-#include <Graphics/texture.hpp>
+#include "Graphics/texture.hpp"
 
 
 namespace ChunkConfigs {   

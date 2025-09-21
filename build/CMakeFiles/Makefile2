@@ -84,12 +84,12 @@ clean: CMakeFiles/Runora.dir/clean
 CMakeFiles/Runora.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=1,2,3 "Built target Runora"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Built target Runora"
 .PHONY : CMakeFiles/Runora.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Runora.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hugoa\Desktop\Runora\build\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hugoa\Desktop\Runora\build\CMakeFiles 16
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Runora.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\hugoa\Desktop\Runora\build\CMakeFiles 0
 .PHONY : CMakeFiles/Runora.dir/rule
@@ -101,7 +101,7 @@ Runora: CMakeFiles/Runora.dir/rule
 # codegen rule for target.
 CMakeFiles/Runora.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Runora.dir\build.make CMakeFiles/Runora.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=1,2,3 "Finished codegen for target Runora"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16 "Finished codegen for target Runora"
 .PHONY : CMakeFiles/Runora.dir/codegen
 
 # clean rule for target.

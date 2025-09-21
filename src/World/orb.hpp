@@ -1,42 +1,50 @@
 #pragma once
 
 #include <iostream>
-#include <random>
+#include <string>
+// SFML
 #include <SFML/Graphics.hpp>
-#include <World/map.hpp>
-#include <getters.hpp>
+
 
 namespace OrbConfigs {
-    float ORB_RADIUS = 22.0f;
-    float ORB_SPAWN_PROBABILITY = .2f;
+    constexpr float ORB_RADIUS = 22.0f;
+    constexpr float ORB_SPAWN_PROBABILITY = .2f;
 }
+
+
+struct OrbInfo {
+    uint16_t id;
+    std::string name;
+    uint16_t x, y;
+    sf::IntRect textureRect;
+};
+
 
 class Orb {
     public:
-        Orb();
+        Orb(sf::Vector2i position);
 
         void drawHitbox(sf::RenderWindow& window);
+        bool intersectsHitbox(const sf::FloatRect& playerHitbox);
 
-        void update(bool collected);
-        void draw(sf::RenderWindow& window);
+        void setCollected();
     private:
         bool collected;
-        sf::Sprite orbSprite;
         sf::CircleShape hitbox;
+        sf::Vector2i position;
     
         void setHibbox();
 };
 
 
-class OrbManager {
+class OrbRegistry {
     public:
-        bool generateOrb(uint32_t tileX, uint32_t tileY);
-        bool spawnOrb(float probability);
+        OrbRegistry();
 
-        void drawHitbox(sf::RenderWindow& window);
+        void loadFromJSON(std::string filename);
 
-        void update(sf::Vector2f playerPos);
-        void draw(sf::RenderWindow& window);
+        const OrbInfo* getOrbInfo(const uint16_t id) const;
+        std::optional<sf::IntRect> getTextureRect(const uint16_t id) const;
     private:
-        std::unordered_map<sf::Vector2i, uint32_t, Vector2iHash> activeOrbs;
+        inline static std::unordered_map<uint16_t, OrbInfo> orbs;
 };

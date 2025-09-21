@@ -4,7 +4,7 @@
 // SFML
 #include <SFML/Graphics.hpp>
 // Utils
-#include <Utils/utils.hpp>
+#include "Utils/utils.hpp"
 
 class KeyClicked {
     public:
@@ -48,23 +48,20 @@ class MouseClicked {
         static inline std::array<bool, sf::Mouse::ButtonCount> wasPressed{};
 };
 
+
 class Button {
+    // I know this code's trash, but it works
     public:
         Button();
         
-        Button(const sf::Vector2f& size, unsigned int textSize, const sf::Vector2f& position, const sf::Font& font, const std::string& label, const sf::Color& bgColor, const sf::Color& textColor, const sf::Color& hoverColor)
-        : bgColor(bgColor), textColor(textColor), hoverColor(hoverColor), text(font) {
-            shape.setSize(size);
-            shape.setOrigin(shape.getLocalBounds().getCenter());
-            shape.setPosition(position);
-            shape.setFillColor(bgColor);
-
-            text.setString(label);
-            text.setCharacterSize(textSize);
-            text.setFillColor(textColor);
-            text.setOrigin(text.getLocalBounds().getCenter());
-            text.setPosition(position);
-        }
+        Button(const sf::Vector2f& size,
+            unsigned int textSize, 
+            const sf::Vector2f& position, 
+            const sf::Font& font, 
+            const std::string& label, 
+            const sf::Color& bgColor, 
+            const sf::Color& textColor, 
+            const sf::Color& hoverColor);
         
         void changeLabel(std::string& newLabel);
 
@@ -72,9 +69,6 @@ class Button {
         bool isClicked(const sf::RenderWindow& window);
         void update(sf::RenderWindow& window);
         void draw(sf::RenderWindow& window);
-
-
-
     private:
         sf::RectangleShape shape;
         sf::Color bgColor;  

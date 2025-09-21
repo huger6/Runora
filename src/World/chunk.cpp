@@ -1,14 +1,18 @@
-#include <chunk.hpp>
+#include "chunk.hpp"
+// Utils
+#include "Utils/getters.hpp"
 
 
 // Public
 
 
 Chunk::Chunk(sf::Vector2i chunkCoordinates, TileRegistry& registry) : 
+    chunkCoords(chunkCoordinates),
+    loaded(false),
     vertices(sf::PrimitiveType::Triangles, TileConfigs::CHUNK_WIDTH * TileConfigs::CHUNK_HEIGHT * 6),
     registry(registry), 
-    coordsText(getFont()), needsUpdate(true), chunkCoords(chunkCoordinates),
-    loaded(false) {
+    coordsText(getFont()), 
+    needsUpdate(true) {
         for (int y = 0; y < TileConfigs::CHUNK_HEIGHT; y++) {
             for (int x = 0; x < TileConfigs::CHUNK_WIDTH; x++) {
                 tiles[x][y] = TileId::None;
@@ -54,7 +58,7 @@ void Chunk::buildVertexArray() {
 
             sf::Vertex* triangle = &vertices[(x + y * TileConfigs::CHUNK_WIDTH) * 6];
 
-            // 0 ----- 1
+            // 0-------1
             // |       |
             // |       |
             // 3-------2
@@ -88,7 +92,6 @@ void Chunk::buildVertexArray() {
             triangle[3].texCoords = {tx0, ty0};
             triangle[4].texCoords = {tx1, ty1};
             triangle[5].texCoords = {tx0, ty1};
-
         }
     }
 }
@@ -109,7 +112,7 @@ bool Chunk::contains(uint16_t pixelX, uint16_t pixelY) const {
 
 void Chunk::draw(sf::RenderWindow& window, TextureManager& texManager) {
     sf::RenderStates states;
-    states.texture = texManager.getTilesetPtr();
+    states.texture = texManager.getSetPtr();
     window.draw(vertices, states);
     // drawBorder(window); // debug
 }

@@ -1,4 +1,6 @@
-#include <button.hpp>
+#include "button.hpp"
+// Utils
+#include "Utils/getters.hpp"
 
 
 // Public
@@ -10,9 +12,11 @@ KeyClicked::KeyClicked() = default;
 MouseClicked::MouseClicked() = default;
 
 
-Button::Button() = default;
+Button::Button() : text(getFont()) {}
 
-Button::Button(
+//This code is horrific but it works
+
+Button::Button (
     const sf::Vector2f& size, 
     unsigned int textSize,
     const sf::Vector2f& position,

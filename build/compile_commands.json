@@ -1,9 +1,87 @@
 [
 {
   "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\Graphics\\texture.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\Graphics\\texture.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/Graphics/texture.cpp",
+  "output": "CMakeFiles/Runora.dir/src/Graphics/texture.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\HUD\\button.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\HUD\\button.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/HUD/button.cpp",
+  "output": "CMakeFiles/Runora.dir/src/HUD/button.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\HUD\\hud.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\HUD\\hud.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/HUD/hud.cpp",
+  "output": "CMakeFiles/Runora.dir/src/HUD/hud.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\HUD\\menu.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\HUD\\menu.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/HUD/menu.cpp",
+  "output": "CMakeFiles/Runora.dir/src/HUD/menu.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\HUD\\orbCounter.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\HUD\\orbCounter.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/HUD/orbCounter.cpp",
+  "output": "CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\HUD\\time.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\HUD\\time.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/HUD/time.cpp",
+  "output": "CMakeFiles/Runora.dir/src/HUD/time.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\Player\\player.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\Player\\player.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/Player/player.cpp",
+  "output": "CMakeFiles/Runora.dir/src/Player/player.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\World\\chunk.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\World\\chunk.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/World/chunk.cpp",
+  "output": "CMakeFiles/Runora.dir/src/World/chunk.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\World\\orb.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\World\\orb.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/World/orb.cpp",
+  "output": "CMakeFiles/Runora.dir/src/World/orb.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\World\\orbGenerator.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\World\\orbGenerator.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/World/orbGenerator.cpp",
+  "output": "CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\World\\terrainGenerator.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\World\\terrainGenerator.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/World/terrainGenerator.cpp",
+  "output": "CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\World\\tile.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\World\\tile.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/World/tile.cpp",
+  "output": "CMakeFiles/Runora.dir/src/World/tile.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
   "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\app\\Game\\game.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\app\\Game\\game.cpp",
   "file": "C:/Users/hugoa/Desktop/Runora/src/app/Game/game.cpp",
   "output": "CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj"
+},
+{
+  "directory": "C:/Users/hugoa/Desktop/Runora/build",
+  "command": "C:\\mingw64\\bin\\g++.exe -DASSETS_PATH=\\\"C:/Users/hugoa/Desktop/Runora/assets\\\" -DSFML_STATIC @CMakeFiles/Runora.dir/includes_CXX.rsp -g -std=c++20 -Wall -Wextra -Wpedantic -o CMakeFiles\\Runora.dir\\src\\app\\Game\\gamestate.cpp.obj -c C:\\Users\\hugoa\\Desktop\\Runora\\src\\app\\Game\\gamestate.cpp",
+  "file": "C:/Users/hugoa/Desktop/Runora/src/app/Game/gamestate.cpp",
+  "output": "CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.obj"
 },
 {
   "directory": "C:/Users/hugoa/Desktop/Runora/build",

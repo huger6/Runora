@@ -1,0 +1,2 @@
+HUD:
+    timer is 2x slower

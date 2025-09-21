@@ -71,11 +71,191 @@ include CMakeFiles/Runora.dir/flags.make
 CMakeFiles/Runora.dir/codegen:
 .PHONY : CMakeFiles/Runora.dir/codegen
 
+CMakeFiles/Runora.dir/src/Graphics/texture.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/Graphics/texture.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/Graphics/texture.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/Graphics/texture.cpp
+CMakeFiles/Runora.dir/src/Graphics/texture.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Runora.dir/src/Graphics/texture.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/Graphics/texture.cpp.obj -MF CMakeFiles\Runora.dir\src\Graphics\texture.cpp.obj.d -o CMakeFiles\Runora.dir\src\Graphics\texture.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\Graphics\texture.cpp
+
+CMakeFiles/Runora.dir/src/Graphics/texture.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/Graphics/texture.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\Graphics\texture.cpp > CMakeFiles\Runora.dir\src\Graphics\texture.cpp.i
+
+CMakeFiles/Runora.dir/src/Graphics/texture.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/Graphics/texture.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\Graphics\texture.cpp -o CMakeFiles\Runora.dir\src\Graphics\texture.cpp.s
+
+CMakeFiles/Runora.dir/src/HUD/button.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/HUD/button.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/HUD/button.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/HUD/button.cpp
+CMakeFiles/Runora.dir/src/HUD/button.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Runora.dir/src/HUD/button.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/HUD/button.cpp.obj -MF CMakeFiles\Runora.dir\src\HUD\button.cpp.obj.d -o CMakeFiles\Runora.dir\src\HUD\button.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\HUD\button.cpp
+
+CMakeFiles/Runora.dir/src/HUD/button.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/HUD/button.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\HUD\button.cpp > CMakeFiles\Runora.dir\src\HUD\button.cpp.i
+
+CMakeFiles/Runora.dir/src/HUD/button.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/HUD/button.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\HUD\button.cpp -o CMakeFiles\Runora.dir\src\HUD\button.cpp.s
+
+CMakeFiles/Runora.dir/src/HUD/hud.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/HUD/hud.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/HUD/hud.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/HUD/hud.cpp
+CMakeFiles/Runora.dir/src/HUD/hud.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Runora.dir/src/HUD/hud.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/HUD/hud.cpp.obj -MF CMakeFiles\Runora.dir\src\HUD\hud.cpp.obj.d -o CMakeFiles\Runora.dir\src\HUD\hud.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\HUD\hud.cpp
+
+CMakeFiles/Runora.dir/src/HUD/hud.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/HUD/hud.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\HUD\hud.cpp > CMakeFiles\Runora.dir\src\HUD\hud.cpp.i
+
+CMakeFiles/Runora.dir/src/HUD/hud.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/HUD/hud.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\HUD\hud.cpp -o CMakeFiles\Runora.dir\src\HUD\hud.cpp.s
+
+CMakeFiles/Runora.dir/src/HUD/menu.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/HUD/menu.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/HUD/menu.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/HUD/menu.cpp
+CMakeFiles/Runora.dir/src/HUD/menu.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Runora.dir/src/HUD/menu.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/HUD/menu.cpp.obj -MF CMakeFiles\Runora.dir\src\HUD\menu.cpp.obj.d -o CMakeFiles\Runora.dir\src\HUD\menu.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\HUD\menu.cpp
+
+CMakeFiles/Runora.dir/src/HUD/menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/HUD/menu.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\HUD\menu.cpp > CMakeFiles\Runora.dir\src\HUD\menu.cpp.i
+
+CMakeFiles/Runora.dir/src/HUD/menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/HUD/menu.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\HUD\menu.cpp -o CMakeFiles\Runora.dir\src\HUD\menu.cpp.s
+
+CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/HUD/orbCounter.cpp
+CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.obj -MF CMakeFiles\Runora.dir\src\HUD\orbCounter.cpp.obj.d -o CMakeFiles\Runora.dir\src\HUD\orbCounter.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\HUD\orbCounter.cpp
+
+CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\HUD\orbCounter.cpp > CMakeFiles\Runora.dir\src\HUD\orbCounter.cpp.i
+
+CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\HUD\orbCounter.cpp -o CMakeFiles\Runora.dir\src\HUD\orbCounter.cpp.s
+
+CMakeFiles/Runora.dir/src/HUD/time.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/HUD/time.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/HUD/time.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/HUD/time.cpp
+CMakeFiles/Runora.dir/src/HUD/time.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Runora.dir/src/HUD/time.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/HUD/time.cpp.obj -MF CMakeFiles\Runora.dir\src\HUD\time.cpp.obj.d -o CMakeFiles\Runora.dir\src\HUD\time.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\HUD\time.cpp
+
+CMakeFiles/Runora.dir/src/HUD/time.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/HUD/time.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\HUD\time.cpp > CMakeFiles\Runora.dir\src\HUD\time.cpp.i
+
+CMakeFiles/Runora.dir/src/HUD/time.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/HUD/time.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\HUD\time.cpp -o CMakeFiles\Runora.dir\src\HUD\time.cpp.s
+
+CMakeFiles/Runora.dir/src/Player/player.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/Player/player.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/Player/player.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/Player/player.cpp
+CMakeFiles/Runora.dir/src/Player/player.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Runora.dir/src/Player/player.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/Player/player.cpp.obj -MF CMakeFiles\Runora.dir\src\Player\player.cpp.obj.d -o CMakeFiles\Runora.dir\src\Player\player.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\Player\player.cpp
+
+CMakeFiles/Runora.dir/src/Player/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/Player/player.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\Player\player.cpp > CMakeFiles\Runora.dir\src\Player\player.cpp.i
+
+CMakeFiles/Runora.dir/src/Player/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/Player/player.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\Player\player.cpp -o CMakeFiles\Runora.dir\src\Player\player.cpp.s
+
+CMakeFiles/Runora.dir/src/World/chunk.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/World/chunk.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/World/chunk.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/World/chunk.cpp
+CMakeFiles/Runora.dir/src/World/chunk.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Runora.dir/src/World/chunk.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/World/chunk.cpp.obj -MF CMakeFiles\Runora.dir\src\World\chunk.cpp.obj.d -o CMakeFiles\Runora.dir\src\World\chunk.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\World\chunk.cpp
+
+CMakeFiles/Runora.dir/src/World/chunk.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/World/chunk.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\World\chunk.cpp > CMakeFiles\Runora.dir\src\World\chunk.cpp.i
+
+CMakeFiles/Runora.dir/src/World/chunk.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/World/chunk.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\World\chunk.cpp -o CMakeFiles\Runora.dir\src\World\chunk.cpp.s
+
+CMakeFiles/Runora.dir/src/World/orb.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/World/orb.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/World/orb.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/World/orb.cpp
+CMakeFiles/Runora.dir/src/World/orb.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Runora.dir/src/World/orb.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/World/orb.cpp.obj -MF CMakeFiles\Runora.dir\src\World\orb.cpp.obj.d -o CMakeFiles\Runora.dir\src\World\orb.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\World\orb.cpp
+
+CMakeFiles/Runora.dir/src/World/orb.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/World/orb.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\World\orb.cpp > CMakeFiles\Runora.dir\src\World\orb.cpp.i
+
+CMakeFiles/Runora.dir/src/World/orb.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/World/orb.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\World\orb.cpp -o CMakeFiles\Runora.dir\src\World\orb.cpp.s
+
+CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/World/orbGenerator.cpp
+CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.obj -MF CMakeFiles\Runora.dir\src\World\orbGenerator.cpp.obj.d -o CMakeFiles\Runora.dir\src\World\orbGenerator.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\World\orbGenerator.cpp
+
+CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\World\orbGenerator.cpp > CMakeFiles\Runora.dir\src\World\orbGenerator.cpp.i
+
+CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\World\orbGenerator.cpp -o CMakeFiles\Runora.dir\src\World\orbGenerator.cpp.s
+
+CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/World/terrainGenerator.cpp
+CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.obj -MF CMakeFiles\Runora.dir\src\World\terrainGenerator.cpp.obj.d -o CMakeFiles\Runora.dir\src\World\terrainGenerator.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\World\terrainGenerator.cpp
+
+CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\World\terrainGenerator.cpp > CMakeFiles\Runora.dir\src\World\terrainGenerator.cpp.i
+
+CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\World\terrainGenerator.cpp -o CMakeFiles\Runora.dir\src\World\terrainGenerator.cpp.s
+
+CMakeFiles/Runora.dir/src/World/tile.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/World/tile.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/World/tile.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/World/tile.cpp
+CMakeFiles/Runora.dir/src/World/tile.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Runora.dir/src/World/tile.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/World/tile.cpp.obj -MF CMakeFiles\Runora.dir\src\World\tile.cpp.obj.d -o CMakeFiles\Runora.dir\src\World\tile.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\World\tile.cpp
+
+CMakeFiles/Runora.dir/src/World/tile.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/World/tile.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\World\tile.cpp > CMakeFiles\Runora.dir\src\World\tile.cpp.i
+
+CMakeFiles/Runora.dir/src/World/tile.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/World/tile.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\World\tile.cpp -o CMakeFiles\Runora.dir\src\World\tile.cpp.s
+
 CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj: CMakeFiles/Runora.dir/flags.make
 CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
 CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/app/Game/game.cpp
 CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj -MF CMakeFiles\Runora.dir\src\app\Game\game.cpp.obj.d -o CMakeFiles\Runora.dir\src\app\Game\game.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\app\Game\game.cpp
 
 CMakeFiles/Runora.dir/src/app/Game/game.cpp.i: cmake_force
@@ -86,11 +266,26 @@ CMakeFiles/Runora.dir/src/app/Game/game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/app/Game/game.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\app\Game\game.cpp -o CMakeFiles\Runora.dir\src\app\Game\game.cpp.s
 
+CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.obj: CMakeFiles/Runora.dir/flags.make
+CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
+CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/app/Game/gamestate.cpp
+CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.obj -MF CMakeFiles\Runora.dir\src\app\Game\gamestate.cpp.obj.d -o CMakeFiles\Runora.dir\src\app\Game\gamestate.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\app\Game\gamestate.cpp
+
+CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\hugoa\Desktop\Runora\src\app\Game\gamestate.cpp > CMakeFiles\Runora.dir\src\app\Game\gamestate.cpp.i
+
+CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\hugoa\Desktop\Runora\src\app\Game\gamestate.cpp -o CMakeFiles\Runora.dir\src\app\Game\gamestate.cpp.s
+
 CMakeFiles/Runora.dir/src/app/main.cpp.obj: CMakeFiles/Runora.dir/flags.make
 CMakeFiles/Runora.dir/src/app/main.cpp.obj: CMakeFiles/Runora.dir/includes_CXX.rsp
 CMakeFiles/Runora.dir/src/app/main.cpp.obj: C:/Users/hugoa/Desktop/Runora/src/app/main.cpp
 CMakeFiles/Runora.dir/src/app/main.cpp.obj: CMakeFiles/Runora.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Runora.dir/src/app/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Runora.dir/src/app/main.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Runora.dir/src/app/main.cpp.obj -MF CMakeFiles\Runora.dir\src\app\main.cpp.obj.d -o CMakeFiles\Runora.dir\src\app\main.cpp.obj -c C:\Users\hugoa\Desktop\Runora\src\app\main.cpp
 
 CMakeFiles/Runora.dir/src/app/main.cpp.i: cmake_force
@@ -103,13 +298,39 @@ CMakeFiles/Runora.dir/src/app/main.cpp.s: cmake_force
 
 # Object files for target Runora
 Runora_OBJECTS = \
+"CMakeFiles/Runora.dir/src/Graphics/texture.cpp.obj" \
+"CMakeFiles/Runora.dir/src/HUD/button.cpp.obj" \
+"CMakeFiles/Runora.dir/src/HUD/hud.cpp.obj" \
+"CMakeFiles/Runora.dir/src/HUD/menu.cpp.obj" \
+"CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.obj" \
+"CMakeFiles/Runora.dir/src/HUD/time.cpp.obj" \
+"CMakeFiles/Runora.dir/src/Player/player.cpp.obj" \
+"CMakeFiles/Runora.dir/src/World/chunk.cpp.obj" \
+"CMakeFiles/Runora.dir/src/World/orb.cpp.obj" \
+"CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.obj" \
+"CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.obj" \
+"CMakeFiles/Runora.dir/src/World/tile.cpp.obj" \
 "CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj" \
+"CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.obj" \
 "CMakeFiles/Runora.dir/src/app/main.cpp.obj"
 
 # External object files for target Runora
 Runora_EXTERNAL_OBJECTS =
 
+Runora.exe: CMakeFiles/Runora.dir/src/Graphics/texture.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/HUD/button.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/HUD/hud.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/HUD/menu.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/HUD/orbCounter.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/HUD/time.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/Player/player.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/World/chunk.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/World/orb.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/World/orbGenerator.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/World/terrainGenerator.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/World/tile.cpp.obj
 Runora.exe: CMakeFiles/Runora.dir/src/app/Game/game.cpp.obj
+Runora.exe: CMakeFiles/Runora.dir/src/app/Game/gamestate.cpp.obj
 Runora.exe: CMakeFiles/Runora.dir/src/app/main.cpp.obj
 Runora.exe: CMakeFiles/Runora.dir/build.make
 Runora.exe: C:/C++\ Libraries/SFML-3.0.0/lib/libsfml-graphics-s-d.a
@@ -119,7 +340,7 @@ Runora.exe: C:/C++\ Libraries/SFML-3.0.0/lib/libfreetyped.a
 Runora.exe: CMakeFiles/Runora.dir/linkLibs.rsp
 Runora.exe: CMakeFiles/Runora.dir/objects1.rsp
 Runora.exe: CMakeFiles/Runora.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable Runora.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\hugoa\Desktop\Runora\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable Runora.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Runora.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

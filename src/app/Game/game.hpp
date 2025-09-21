@@ -4,15 +4,16 @@
 // SFML
 #include <SFML/Graphics.hpp>
 // World
-#include <World/tile.hpp>
-#include <World/terrainGenerator.hpp>
-#include <World/map.hpp>
+#include "World/tile.hpp"
+#include "World/terrainGenerator.hpp"
+#include "World/map.hpp"
+#include "World/orbGenerator.hpp"
 // Player
-#include <Player/player.hpp>
+#include "Player/player.hpp"
 // HUD
-#include <HUD/hud.hpp>
+#include "HUD/hud.hpp"
 // Gamestate
-#include <gamestate.hpp>
+#include "gamestate.hpp"
 
 
 class Game {
@@ -27,7 +28,7 @@ class Game {
         Player player;
         TerrainGenerator terrain;
         sf::View camera;
-        // Orb manager here
+        OrbGenerator orbGenerator;
         HUD hud;
         bool isRunning;
         bool firstGame;
