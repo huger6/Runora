@@ -8,7 +8,7 @@
 
 namespace OrbConfigs {
     constexpr float ORB_RADIUS = 22.0f;
-    constexpr float ORB_SPAWN_PROBABILITY = .2f;
+    constexpr float ORB_SPAWN_PROBABILITY = .15f;
 }
 
 

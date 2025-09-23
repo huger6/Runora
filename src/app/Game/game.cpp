@@ -57,7 +57,7 @@ void Game::update() {
         window.setView(camera);
         terrain.update(player.getPosition());
         // ERROR HERE!
-        // orbGenerator.update(terrain.getSpawningOrbsLimitsX(player.getPosition()), player.getHitbox(), camera);
+        orbGenerator.update(terrain.getSpawningOrbsLimitsX(player.getPosition()), player.getHitbox(), camera);
         hud.update(orbGenerator.getNumberOfOrbs(), true); // Needs checking to start timer
         if (KeyClicked::isKeyClicked(sf::Keyboard::Key::Escape)) stateManager.setCurrentState(GameState::PAUSE_MENU);
     }

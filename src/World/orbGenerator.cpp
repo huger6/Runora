@@ -27,11 +27,11 @@ uint32_t OrbGenerator::getNumberOfOrbs() const {
 
 
 void OrbGenerator::update(const std::vector<float>& limitsX, const sf::FloatRect& playerHitbox, const sf::View& camera) {
-    float bottom = MapConfigs::GROUND_Y;
-    float top = MapConfigs::JUMPING_MAX_Y;
+    float bottom = MapConfigs::GROUND_Y / TileConfigs::TILE_SIZE;
+    float top = MapConfigs::JUMPING_MAX_Y / TileConfigs::TILE_SIZE;
 
-    uint32_t left = static_cast<uint32_t>(limitsX[0]);
-    uint32_t right = static_cast<uint32_t>(limitsX[1]);
+    uint32_t left = static_cast<uint32_t>(limitsX[0]) / TileConfigs::TILE_SIZE;
+    uint32_t right = static_cast<uint32_t>(limitsX[1]) / TileConfigs::TILE_SIZE;
 
     for (auto orb = activeOrbs.begin(); orb != activeOrbs.end(); orb++) {
         const sf::Vector2i& coords = orb->first;
@@ -54,6 +54,7 @@ void OrbGenerator::update(const std::vector<float>& limitsX, const sf::FloatRect
             trySpawnOrb(x, y); // it might spawn on the player!!
         }
     }
+
 }
 
 void OrbGenerator::draw(sf::RenderWindow& window) {
@@ -123,8 +124,12 @@ void OrbGenerator::buildVertexArray() {
 }
 
 bool OrbGenerator::generateOrb(uint32_t tileX, uint32_t tileY) {
-    if (tileY < MapConfigs::CHUNK_Y_AIR_VISIBLE * TileConfigs::CHUNK_HEIGHT + 1 && spawnOrb(OrbConfigs::ORB_SPAWN_PROBABILITY)) 
+    if (tileY < MapConfigs::GROUND_Y / TileConfigs::TILE_SIZE + 1 
+        && tileY > MapConfigs::JUMPING_MAX_Y / TileConfigs::TILE_SIZE 
+        && spawnOrb(OrbConfigs::ORB_SPAWN_PROBABILITY)) {
         return true;
+    }
+    return false;
 }
 
 bool OrbGenerator::spawnOrb(float probability) {
@@ -141,10 +146,11 @@ void OrbGenerator::trySpawnOrb(uint32_t tileX, uint32_t tileY) {
 
     sf::Vector2i coords(tileX * TileConfigs::TILE_SIZE,
                         tileY * TileConfigs::TILE_SIZE);
-
+    
     // Don't allow the orb to spawn on the player
     if (activeOrbs.contains(coords)) return;
 
+    // std::cout << "Spawning orb now" << std::endl;
     auto orb = std::make_unique<Orb>(coords);
 
     // Insert on the umap
