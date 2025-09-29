@@ -29,8 +29,8 @@ class Player {
         sf::Vector2f& getPosition();
         void checkMovement();
 
-        void setHibbox();
-        const sf::FloatRect& getHitbox() const;
+        void setHitbox();
+        const sf::FloatRect getHitbox() const;
         void drawHitbox(sf::RenderWindow& window);
 
         void update();

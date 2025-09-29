@@ -8,7 +8,7 @@
 
 class OrbCounter {
     private:
-        uint32_t orbs;
+        uint32_t orbsTotal;
         sf::Text text;
         
         void setCounterPosition(sf::View& view);
@@ -17,6 +17,6 @@ class OrbCounter {
 
         uint32_t getTotalOrbs() const;
 
-        void update(uint32_t orbsToAdd);
+        void update(uint32_t orbs);
         void draw(sf::RenderWindow& window, sf::View& view);
 };

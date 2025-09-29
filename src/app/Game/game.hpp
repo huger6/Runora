@@ -28,6 +28,7 @@ class Game {
         Player player;
         TerrainGenerator terrain;
         sf::View camera;
+        OrbRegistry orbRegistry;
         OrbGenerator orbGenerator;
         HUD hud;
         bool isRunning;

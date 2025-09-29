@@ -10,15 +10,15 @@ OrbCounter::OrbCounter() : text(getFont()) {
     text.setFillColor(sf::Color::Magenta);
 }
 
-uint32_t OrbCounter::getTotalOrbs() const { return orbs; }
+uint32_t OrbCounter::getTotalOrbs() const { return orbsTotal; }
 
-void OrbCounter::update(uint32_t orbsToAdd) {
-    orbs += orbsToAdd;
+void OrbCounter::update(uint32_t orbs) {
+    orbsTotal = orbs;
 }
 
 void OrbCounter::draw(sf::RenderWindow& window, sf::View& camera) {
     setCounterPosition(camera);
-    text.setString(std::to_string(orbs));
+    text.setString(std::to_string(orbsTotal));
     window.draw(text);
 }
 

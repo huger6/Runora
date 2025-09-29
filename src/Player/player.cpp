@@ -6,21 +6,20 @@
 // Public
 
 
-Player::Player() : player(getPlayerTexture()) {
-    playerPos.x = MapConfigs::STARTING_POSITION_X;
-    playerPos.y = MapConfigs::STARTING_POSITION_Y;
-
-    player.setOrigin(player.getGlobalBounds().getCenter());
-    player.setScale({PlayerConfigs::PLAYER_SCALE_WIDTH, PlayerConfigs::PLAYER_SCALE_HEIGHT});
-    this->setHibbox(); // Debug
+Player::Player() : 
+    playerPos({MapConfigs::STARTING_POSITION_X, MapConfigs::STARTING_POSITION_Y}),
+    player(getPlayerTexture()) {
+        player.setOrigin(player.getGlobalBounds().getCenter());
+        player.setScale({PlayerConfigs::PLAYER_SCALE_WIDTH, PlayerConfigs::PLAYER_SCALE_HEIGHT});
+        setHitbox(); // Debug
 }
 
 Player::Player(sf::Vector2f& playerPos) : 
-    player(getPlayerTexture()), 
-    playerPos(playerPos) {
+    playerPos(playerPos),
+    player(getPlayerTexture()) {
         player.setOrigin(player.getGlobalBounds().getCenter());
         player.setScale({PlayerConfigs::PLAYER_SCALE_WIDTH, PlayerConfigs::PLAYER_SCALE_HEIGHT});
-        this->setHibbox(); // Debug
+        this->setHitbox(); // Debug
 }
 
 sf::Vector2f& Player::getPosition() {
@@ -36,13 +35,13 @@ void Player::checkMovement() {
     // Ensure X coordinates never go negative
     playerPos.x = std::max(0.0f, playerPos.x);
     // Vertical limits to allow only jump and running
-    playerPos.y = std::min(MapConfigs::GROUND_Y, std::max(playerPos.y, MapConfigs::JUMPING_MAX_Y));
+    playerPos.y = std::min(MapConfigs::PLAYER_MIN_Y, std::max(playerPos.y, MapConfigs::PLAYER_MAX_Y));
     // playerPos.y = std::max(0.0f, playerPos.y); // Debug
     // Output player position for debugging
     // std::cout << "Player Position: (" << playerPos.x << ", " << playerPos.y << ")" << std::endl;
 }
 
-void Player::setHibbox() {
+void Player::setHitbox() {
     hitbox.setSize({PlayerConfigs::PLAYER_WIDTH, PlayerConfigs::PLAYER_HEIGHT});
     hitbox.setOrigin({hitbox.getLocalBounds().size.x / 2.0f - PlayerConfigs::PLAYER_HITBOX_OFFSET_X, hitbox.getLocalBounds().size.y / 2.0f + PlayerConfigs::PLAYER_HITBOX_OFFSET_Y});
     
@@ -51,7 +50,7 @@ void Player::setHibbox() {
     hitbox.setOutlineColor(sf::Color::Red);
 }
 
-const sf::FloatRect& Player::getHitbox() const {
+const sf::FloatRect Player::getHitbox() const {
     return hitbox.getGlobalBounds();
 }
 

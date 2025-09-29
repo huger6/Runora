@@ -42,7 +42,7 @@ The name *Runora* comes from combining the words **"Run"** and **"Aura"**, refle
 
 3. **Run the game**
     ```bash
-    ./build/Runora.exe
+    ./build/Runora
 
 💡 A pre-compiled version is also available.
 
