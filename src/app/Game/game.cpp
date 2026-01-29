@@ -10,14 +10,16 @@ Game::Game() :
         player(),
         terrain(registry),
         camera(player.getPosition(), {MapConfigs::SCREEN_SIZE_X, MapConfigs::SCREEN_SIZE_Y}),
-        orbGenerator(terrain.getSpawningOrbsLength()),
+        orbRegistry(),
+        orbGenerator(terrain.getSpawningOrbsLength(), orbRegistry),
         hud(),
         isRunning(true),
         firstGame(true) {
-    window.setVerticalSyncEnabled(false);
-    window.setFramerateLimit(60);
+            window.setVerticalSyncEnabled(false);
+            window.setFramerateLimit(60);
 
-    registry.loadFromJSON(getTilesetJSONPath());
+            registry.loadFromJSON(getTilesetJSONPath());
+            orbRegistry.loadFromJSON(getOrbsetJSONPath());
 }
 
 void Game::run() {
@@ -55,9 +57,11 @@ void Game::update() {
         // Update camera based on player's position
         camera.setCenter(player.getPosition());
         window.setView(camera);
+        // Update terrain
         terrain.update(player.getPosition());
-        // ERROR HERE!
-        // orbGenerator.update(terrain.getSpawningOrbsLimitsX(player.getPosition()), player.getHitbox(), camera);
+        // Update orbs
+        orbGenerator.update(player.getPosition(), player.getHitbox(), camera);
+        // Update HUD
         hud.update(orbGenerator.getNumberOfOrbs(), true); // Needs checking to start timer
         if (KeyClicked::isKeyClicked(sf::Keyboard::Key::Escape)) stateManager.setCurrentState(GameState::PAUSE_MENU);
     }
@@ -65,15 +69,17 @@ void Game::update() {
         stateManager.update(window);
         hud.update(0, false); // Needs checking to start timer
     }
+    // std::cout << "Player pos: (" << player.getPosition().x << "," << player.getPosition().y << ")\n";
 }
 
 void Game::render() {
     window.clear();
     if (stateManager.isPlaying()) {
         terrain.draw(window);
-        player.draw(window);
         orbGenerator.draw(window);
+        player.draw(window);
         hud.draw(window, camera);
+        orbGenerator.drawHitbox(window);
     }
     else {
         stateManager.draw(window);

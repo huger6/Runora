@@ -20,7 +20,7 @@ class HUD {
 
         void resetTimer();
 
-        void update(uint32_t orbsToAdd, bool playing);
+        void update(uint32_t orbsTotal, bool playing);
         void draw(sf::RenderWindow& window, sf::View& camera);
     private:
         GameTimer timer;

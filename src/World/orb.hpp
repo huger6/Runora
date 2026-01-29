@@ -7,8 +7,11 @@
 
 
 namespace OrbConfigs {
-    constexpr float ORB_RADIUS = 22.0f;
-    constexpr float ORB_SPAWN_PROBABILITY = .2f;
+    constexpr float ORB_RADIUS = 11.0f;
+    constexpr float ORB_SPAWN_PROBABILITY = .05f;
+    constexpr uint16_t MAX_NUMBER_ORBS_SPAWNED = 20;
+    constexpr uint16_t ORB_SPAWN_X_OFFSET_IN_TILES = 160;
+    constexpr uint16_t ORB_SPAWN_X_SIZE_IN_TILES = 320;
 }
 
 

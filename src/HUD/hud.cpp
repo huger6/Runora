@@ -14,9 +14,9 @@ void HUD::resetTimer() {
     timer.reset();
 }
 
-void HUD::update(uint32_t orbsToAdd, bool playing) {
+void HUD::update(uint32_t orbsTotal, bool playing) {
     timer.update(playing);
-    orbs.update(orbsToAdd);
+    orbs.update(orbsTotal);
 }
 
 void HUD::draw(sf::RenderWindow& window, sf::View& camera) {
