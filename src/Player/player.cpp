@@ -178,7 +178,7 @@ void Player::draw(sf::RenderWindow& window) {
     applyFacing();
     player.setPosition({playerPos.x, playerPos.y + PlayerConfigs::PLAYER_INITIAL_POSITION_OFFSET});
     window.draw(player);
-    drawHitbox(window);
+    // drawHitbox(window);
 }
 
 bool Player::getIsGrounded() const {
