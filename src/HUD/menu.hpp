@@ -10,23 +10,21 @@
 #include "HUD/button.hpp"
 
 
-// Estrutura para configuração de botões
 struct ButtonConfig {
     std::string label;
-    float yOffset;  // Offset vertical a partir do centro
+    float yOffset;
 };
 
 
-// Classe base para todos os menus
 class Menu {
     public:
         Menu(sf::RenderWindow& window, const std::string& backgroundPath);
         virtual ~Menu() = default;
 
-        // Retorna o índice do botão clicado, ou -1 se nenhum
+        // Retorna button clicked index or -1 if none
         int getClickedButtonIndex(sf::RenderWindow& window);
         
-        // Retorna o botão clicado por label, ou nullptr se nenhum
+        // Returns button clicked or nullptr if none
         Button* getClickedButton(sf::RenderWindow& window);
 
         virtual void update(sf::RenderWindow& window);
@@ -39,10 +37,9 @@ class Menu {
         sf::Sprite background;
         std::vector<Button> buttons;
 
-        // Método auxiliar para adicionar botões
         void addButton(const std::string& label, float yOffset);
         
-        // Configuração padrão de botões
+        // Default buttons config
         static constexpr float BUTTON_WIDTH = 200.0f;
         static constexpr float BUTTON_HEIGHT = 60.0f;
         static constexpr unsigned int BUTTON_TEXT_SIZE = 40;
@@ -59,7 +56,6 @@ class MainMenu : public Menu {
 
         void draw(sf::RenderWindow& window) override;
 
-        // Acesso aos botões por nome para compatibilidade
         Button& getStartButton() { return buttons[0]; }
         Button& getOptionsButton() { return buttons[1]; }
         Button& getQuitButton() { return buttons[2]; }
@@ -77,7 +73,6 @@ class PauseMenu : public Menu {
     public:
         PauseMenu(sf::RenderWindow& window);
 
-        // Acesso aos botões por nome para compatibilidade
         Button& getResumeButton() { return buttons[0]; }
         Button& getOptionsButton() { return buttons[1]; }
         Button& getReturnToMenuButton() { return buttons[2]; }

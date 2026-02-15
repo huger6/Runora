@@ -7,7 +7,7 @@
 
 
 OrbCounter::OrbCounter() : text(getFont()) {
-    text.setFillColor(sf::Color::Magenta);
+    text.setFillColor(sf::Color::Black);
 }
 
 uint32_t OrbCounter::getTotalOrbs() const { return orbsTotal; }

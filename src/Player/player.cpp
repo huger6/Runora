@@ -15,7 +15,12 @@ Player::Player() :
     acceleration({0.0f, 0.0f}),
     isGrounded(true),
     jumpsRemaining(PlayerConfigs::MAX_JUMPS),
-    jumpKeyWasPressed(false) {
+    jumpKeyWasPressed(false),
+    facing(FacingDirection::East),
+    animFrame(0),
+    animTimer(0.0f),
+    isDoubleJumping(false),
+    wasRunningBeforeJump(false) {
         player.setOrigin(player.getGlobalBounds().getCenter());
         player.setScale({PlayerConfigs::PLAYER_SCALE_WIDTH, PlayerConfigs::PLAYER_SCALE_HEIGHT});
         setHitbox(); // Debug
@@ -28,7 +33,12 @@ Player::Player(sf::Vector2f& playerPos) :
     acceleration({0.0f, 0.0f}),
     isGrounded(true),
     jumpsRemaining(PlayerConfigs::MAX_JUMPS),
-    jumpKeyWasPressed(false) {
+    jumpKeyWasPressed(false),
+    facing(FacingDirection::East),
+    animFrame(0),
+    animTimer(0.0f),
+    isDoubleJumping(false),
+    wasRunningBeforeJump(false) {
         player.setOrigin(player.getGlobalBounds().getCenter());
         player.setScale({PlayerConfigs::PLAYER_SCALE_WIDTH, PlayerConfigs::PLAYER_SCALE_HEIGHT});
         this->setHitbox(); // Debug
@@ -112,6 +122,8 @@ void Player::checkGroundCollision() {
         velocity.y = 0.0f;
         isGrounded = true;
         jumpsRemaining = PlayerConfigs::MAX_JUMPS;  // Reset jumps when grounded
+        isDoubleJumping = false;                    // Reset double jump animation
+        wasRunningBeforeJump = false;               // Reset running-before-jump flag
     } else {
         isGrounded = false;
     }
@@ -120,12 +132,18 @@ void Player::checkGroundCollision() {
 void Player::jump() {
     if (jumpsRemaining > 0) {
         if (isGrounded) {
-            // First jump - apply full jump impulse
+            // First jump - freeze the current animation frame
+            wasRunningBeforeJump = std::abs(velocity.x) > 1.0f;
             velocity.y = PlayerConfigs::JUMP_IMPULSE;
             isGrounded = false;
+            isDoubleJumping = false;
         } else {
             // Double jump (air jump) - apply slightly weaker impulse
             velocity.y = PlayerConfigs::DOUBLE_JUMP_IMPULSE;
+            isDoubleJumping = true;
+            // Immediately swap animation frame on double jump
+            animFrame = 1 - animFrame;
+            animTimer = 0.0f;
         }
         jumpsRemaining--;
     }
@@ -152,10 +170,75 @@ void Player::drawHitbox(sf::RenderWindow& window) {
 void Player::update(float deltaTime) {
     handleInput(deltaTime);
     applyPhysics(deltaTime);
+    updateAnimation(deltaTime);
 }
 
 void Player::draw(sf::RenderWindow& window) {
+    applyTexture();
+    applyFacing();
     player.setPosition({playerPos.x, playerPos.y + PlayerConfigs::PLAYER_INITIAL_POSITION_OFFSET});
     window.draw(player);
     drawHitbox(window);
+}
+
+
+// Animation
+
+
+void Player::updateAnimation(float deltaTime) {
+    // Update facing direction based on horizontal velocity
+    if (velocity.x > 0.0f) {
+        facing = FacingDirection::East;
+    } else if (velocity.x < 0.0f) {
+        facing = FacingDirection::West;
+    }
+    // When velocity is 0, keep the last facing direction
+
+    bool isRunning = isGrounded && std::abs(velocity.x) > 1.0f;
+
+    if (isRunning) {
+        // On ground and moving: animate normally
+        animTimer += deltaTime;
+        if (animTimer >= PlayerConfigs::ANIMATION_FRAME_DURATION) {
+            animTimer -= PlayerConfigs::ANIMATION_FRAME_DURATION;
+            animFrame = 1 - animFrame;
+        }
+    } else if (isDoubleJumping) {
+        // Double jump: frame was swapped once in jump(), freeze it until landing
+    } else if (!isGrounded) {
+        // Single jump or double jump without moving: freeze current frame
+        // (don't change animFrame or animTimer)
+    } else {
+        // Grounded and idle: reset to idle
+        animFrame = 0;
+        animTimer = 0.0f;
+    }
+}
+
+void Player::applyTexture() {
+    bool isRunning = isGrounded && std::abs(velocity.x) > 1.0f;
+    bool useRunningTex = isRunning
+                      || isDoubleJumping
+                      || (!isGrounded && wasRunningBeforeJump);
+
+    if (useRunningTex) {
+        if (animFrame == 0) {
+            player.setTexture(getPlayerRunTexture1());
+        } else {
+            player.setTexture(getPlayerRunTexture2());
+        }
+    } else {
+        player.setTexture(getPlayerTexture());
+    }
+    sf::FloatRect localBounds = player.getLocalBounds();
+    player.setOrigin({localBounds.size.x / 2.0f, localBounds.size.y / 2.0f});
+}
+
+void Player::applyFacing() {
+    // Textures are drawn facing East; flip X scale for West
+    float scaleX = PlayerConfigs::PLAYER_SCALE_WIDTH;
+    if (facing == FacingDirection::West) {
+        scaleX = -scaleX;
+    }
+    player.setScale({scaleX, PlayerConfigs::PLAYER_SCALE_HEIGHT});
 }

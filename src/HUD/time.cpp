@@ -9,7 +9,7 @@
 GameTimer::GameTimer() : time(getFont()) {
     clock.start();
 
-    time.setFillColor(sf::Color::Red);
+    time.setFillColor(sf::Color::Black);
     time.setOrigin(time.getLocalBounds().getCenter());
 }
 

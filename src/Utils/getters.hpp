@@ -76,6 +76,34 @@ inline sf::Texture& getPlayerTexture() {
     return playerTexture;
 }
 
+inline sf::Texture& getPlayerRunTexture1() {
+    static sf::Texture tex;
+    static bool loaded = false;
+
+    if (!loaded) {
+        if (!tex.loadFromFile("assets/textures/character-runora-running-1.png")) {
+            std::cout << "Failed to load player running texture 1";
+        }
+        loaded = true;
+    }
+
+    return tex;
+}
+
+inline sf::Texture& getPlayerRunTexture2() {
+    static sf::Texture tex;
+    static bool loaded = false;
+
+    if (!loaded) {
+        if (!tex.loadFromFile("assets/textures/character-runora-running-2.png")) {
+            std::cout << "Failed to load player running texture 2";
+        }
+        loaded = true;
+    }
+
+    return tex;
+}
+
 inline sf::Texture& getAuraOrbTexture() {
     static sf::Texture orb;
     static bool loaded = false;

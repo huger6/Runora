@@ -3,7 +3,7 @@
 #include "Utils/getters.hpp"
 
 
-// ==================== Menu Base ====================
+// ==================== Base Menu ====================
 
 Menu::Menu(sf::RenderWindow& window, const std::string& backgroundPath) :
     centerPosition(window.getSize().x / 2.0f, window.getSize().y / 2.0f),
@@ -103,7 +103,7 @@ MainMenu::MainMenu(sf::RenderWindow& window) :
     }
 
 void MainMenu::setupTitle(sf::RenderWindow& window) {
-    (void)window;  // Não usado atualmente
+    (void)window;
     
     title.setString("Runora");
     title.setCharacterSize(80);
@@ -123,7 +123,7 @@ void MainMenu::setupCopyright(sf::RenderWindow& window) {
 }
 
 void MainMenu::draw(sf::RenderWindow& window) {
-    Menu::draw(window);  // Desenha background e botões
+    Menu::draw(window);
     window.draw(title);
     window.draw(copyright);
 }
@@ -133,7 +133,6 @@ void MainMenu::draw(sf::RenderWindow& window) {
 
 PauseMenu::PauseMenu(sf::RenderWindow& window) :
     Menu(window, getBackgroundTexturePausePath()) {
-        // Adicionar botões
         addButton("RESUME", 0.0f);
         addButton("OPTIONS", BUTTON_SPACING);
         addButton("MAIN MENU", BUTTON_SPACING * 2);

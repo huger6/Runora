@@ -8,7 +8,10 @@
 // Utils
 #include "Utils/getters.hpp"
 
+enum class FacingDirection { East, West };
+
 namespace PlayerConfigs {
+    constexpr float ANIMATION_FRAME_DURATION = 0.15f;       // Seconds per animation frame
     constexpr float PLAYER_SCALE_WIDTH = 2.0f;
     constexpr float PLAYER_SCALE_HEIGHT = 2.0f;
     constexpr float PLAYER_HITBOX_OFFSET_X = 1.0f * PLAYER_SCALE_WIDTH;
@@ -56,11 +59,23 @@ class Player {
         sf::Vector2f velocity;          // Current velocity (pixels/s)
         sf::Vector2f acceleration;      // Current acceleration (pixels/s^2)
         bool isGrounded;                // Whether player is on the ground
-        int jumpsRemaining;             // Jumps left (for double jump)
-        bool jumpKeyWasPressed;         // To detect new jump key press
+        int jumpsRemaining;             // Jumps left
+        bool jumpKeyWasPressed;
+
+        // Animation state
+        FacingDirection facing;
+        int animFrame;                  // Current animation frame (0 or 1)
+        float animTimer;                // Timer for frame switching
+        bool isDoubleJumping;
+        bool wasRunningBeforeJump;
 
         // Physics helpers
         void applyGravity();
         void checkGroundCollision();
         void jump();
+
+        // Animation helpers
+        void updateAnimation(float deltaTime);
+        void applyTexture();
+        void applyFacing();
 };
