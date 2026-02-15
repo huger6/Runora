@@ -1,0 +1,3 @@
+bg-menu.png was taken from https://jslegenddev.substack.com/p/how-to-implement-infinite-parallax
+
+All credits to the original creator.
