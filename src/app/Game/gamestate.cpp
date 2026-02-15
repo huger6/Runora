@@ -29,18 +29,18 @@ void GameStateManager::update(sf::RenderWindow& window) {
             mainMenu.update(window);
             
             // Redirect according to buttons pressed
-            if (mainMenu.startBtn.isClicked(window)) setCurrentState(GameState::PLAYING);
-            else if (mainMenu.optionsBtn.isClicked(window)) setCurrentState(GameState::OPTIONS);
-            else if (mainMenu.quitBtn.isClicked(window)) setCurrentState(GameState::EXIT);
+            if (mainMenu.getStartButton().isClicked(window)) setCurrentState(GameState::PLAYING);
+            else if (mainMenu.getOptionsButton().isClicked(window)) setCurrentState(GameState::OPTIONS);
+            else if (mainMenu.getQuitButton().isClicked(window)) setCurrentState(GameState::EXIT);
             break;
         case GameState::PAUSE_MENU:
             window.setView(window.getDefaultView());
             pauseMenu.update(window);
 
             // Redirect according to buttons pressed
-            if (pauseMenu.resumeBtn.isClicked(window) || KeyClicked::isKeyClicked(sf::Keyboard::Key::Escape)) setCurrentState(GameState::PLAYING);
-            else if (pauseMenu.optionsBtn.isClicked(window)) setCurrentState(GameState::OPTIONS);
-            else if (pauseMenu.returnToMenuBtn.isClicked(window)) setCurrentState(GameState::MAIN_MENU);
+            if (pauseMenu.getResumeButton().isClicked(window) || KeyClicked::isKeyClicked(sf::Keyboard::Key::Escape)) setCurrentState(GameState::PLAYING);
+            else if (pauseMenu.getOptionsButton().isClicked(window)) setCurrentState(GameState::OPTIONS);
+            else if (pauseMenu.getReturnToMenuButton().isClicked(window)) setCurrentState(GameState::MAIN_MENU);
             break;
         case GameState::OPTIONS:
             // Redirect to last menu

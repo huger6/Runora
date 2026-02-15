@@ -39,6 +39,11 @@ inline sf::Texture& getBackgroundTexture() {
     return bgTexture;
 }
 
+inline const std::string& getBackgroundTexturePath() {
+    static const std::string path = "assets/textures/bg-menu.png";
+    return path;
+}
+
 inline sf::Texture& getBackgroundTexturePause() {
     static sf::Texture bgTexture;
     static bool loaded = false;
@@ -50,6 +55,11 @@ inline sf::Texture& getBackgroundTexturePause() {
     }
 
     return bgTexture;
+}
+
+inline const std::string& getBackgroundTexturePausePath() {
+    static const std::string path = "assets/textures/fundo.jpg";
+    return path;
 }
 
 inline sf::Texture& getPlayerTexture() {
