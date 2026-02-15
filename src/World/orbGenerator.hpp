@@ -1,6 +1,7 @@
 #pragma once
 
 #include <iostream>
+#include <unordered_set>
 // SFML
 #include <SFML/Graphics.hpp>
 // World
@@ -23,6 +24,7 @@ class OrbGenerator {
         void drawHitbox(sf::RenderWindow& window);
     private:
         std::unordered_map<sf::Vector2i, std::unique_ptr<Orb>, Vector2iHash> activeOrbs;
+        std::unordered_set<sf::Vector2i, Vector2iHash> processedPositions;
         uint32_t orbCounter;
         sf::VertexArray vertices;
         TextureManager texture;
@@ -33,4 +35,5 @@ class OrbGenerator {
 
         void buildVertexArray();
         void trySpawnOrb(uint32_t tileX, uint32_t tileY);
+        void cleanupProcessedPositions(uint32_t leftDespawn);
 };

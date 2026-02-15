@@ -41,7 +41,10 @@ void OrbGenerator::update(const sf::Vector2f& playerPos, const sf::FloatRect& pl
         }
 
         orb++;
-    }  
+    }
+    
+    // Cleanup processed positions that are behind the player
+    cleanupProcessedPositions(leftDespawn);
 
     if (activeOrbs.size() < OrbConfigs::MAX_NUMBER_ORBS_SPAWNED) {
         for (uint32_t x = left; x < right; ++x) {
@@ -151,15 +154,32 @@ bool OrbGenerator::spawnOrb(float probability) {
 }
 
 void OrbGenerator::trySpawnOrb(uint32_t tileX, uint32_t tileY) {
-    if (!generateOrb(tileX, tileY)) return;
-
     sf::Vector2i coords(tileX, tileY);
     
-    // Don't allow the orb to spawn on the player
+    // Skip if this position was already processed (tried to spawn)
+    if (processedPositions.contains(coords)) return;
+    
+    // Mark position as processed
+    processedPositions.insert(coords);
+    
+    // Try to generate orb based on probability
+    if (!generateOrb(tileX, tileY)) return;
+
+    // Don't allow the orb to spawn on an existing orb
     if (activeOrbs.contains(coords)) return;
 
     auto orb = std::make_unique<Orb>(coords);
 
     // Insert on the umap
     activeOrbs.emplace(coords, std::move(orb));
+}
+
+void OrbGenerator::cleanupProcessedPositions(uint32_t leftDespawn) {
+    for (auto it = processedPositions.begin(); it != processedPositions.end(); ) {
+        if (static_cast<uint32_t>(it->x) < leftDespawn) {
+            it = processedPositions.erase(it);
+        } else {
+            ++it;
+        }
+    }
 }
