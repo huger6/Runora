@@ -171,6 +171,7 @@ void Player::update(float deltaTime) {
     handleInput(deltaTime);
     applyPhysics(deltaTime);
     updateAnimation(deltaTime);
+    hitbox.setPosition({playerPos.x, playerPos.y + PlayerConfigs::PLAYER_INITIAL_POSITION_OFFSET});
 }
 
 void Player::draw(sf::RenderWindow& window) {
