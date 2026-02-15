@@ -2,7 +2,7 @@
 
 Runora is a 2D endless runner built from scratch in **C++** with **SFML 3.0.0**. The player sprints through a procedurally generated world, collecting **aura orbs** to rack up score while dodging deadly **water** and **lava** hazards that appear along the path. One wrong step means instant death — jump wisely. The name *Runora* comes from combining **"Run"** and **"Aura"**, reflecting both the gameplay and the collectible items. This project was created as a personal learning exercise for C++ and game development fundamentals.
 
-![Runora Demo](results/drowned.gif)
+![Runora Demo](/results/drowned.gif)
 
 > *Demonstration: Game may feel laggy because of the GIF display -> check the full video <a href="/results/drowned.mp4">here</a>.*
 ---
