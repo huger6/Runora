@@ -22,6 +22,12 @@ Game::Game() :
             window.setVerticalSyncEnabled(false);
             window.setFramerateLimit(60);
 
+            // Set window icon
+            sf::Image iconImage;
+            if (iconImage.loadFromFile(getAppIconPath())) {
+                window.setIcon(iconImage);
+            }
+
             registry.loadFromJSON(getTilesetJSONPath());
             orbRegistry.loadFromJSON(getOrbsetJSONPath());
 

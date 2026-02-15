@@ -24,7 +24,10 @@ include_directories(${NLOHMANN_DIR})
 
 # .exe
 file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS src/*.cpp)
-add_executable(${PROJECT_NAME} ${SOURCES})
+# Application icon
+set(APP_ICON_RC "${CMAKE_CURRENT_BINARY_DIR}/icon.rc")
+file(WRITE ${APP_ICON_RC} "IDI_ICON1 ICON \"${CMAKE_CURRENT_SOURCE_DIR}/assets/ico/favicon.ico\"\n")
+add_executable(${PROJECT_NAME} ${SOURCES} ${APP_ICON_RC})
 
 # Includes
 target_include_directories(${PROJECT_NAME} PRIVATE src)

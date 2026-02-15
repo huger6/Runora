@@ -137,3 +137,8 @@ inline const std::string& getOrbPath() {
     static const std::string path = "assets/orbs/orbset.png";
     return path;
 }
+
+inline const std::string& getAppIconPath() {
+    static const std::string path = "assets/textures/character-runora.png";
+    return path;
+}
