@@ -13,7 +13,7 @@ namespace MapConfigs {
     constexpr uint16_t SCREEN_SIZE_X = 1280;
     constexpr uint16_t SCREEN_SIZE_Y = 720;
     constexpr float GROUND_Y = 1936.f;
-    constexpr float JUMPING_MAX_Y = GROUND_Y - 6 * TileConfigs::TILE_SIZE;
+    constexpr float JUMPING_MAX_Y = GROUND_Y - 12 * TileConfigs::TILE_SIZE;
     constexpr float PLAYER_MIN_Y = 1800.0f;
     constexpr float PLAYER_MAX_Y = PLAYER_MIN_Y - 6 * TileConfigs::TILE_SIZE;
     constexpr float MAX_Y_ORBS = GROUND_Y - TileConfigs::TILE_SIZE;

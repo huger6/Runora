@@ -33,6 +33,7 @@ class Game {
         HUD hud;
         bool isRunning;
         bool firstGame;
+        sf::Clock deltaClock;  // Clock for deltaTime calculation
         
         void processEvents();
         void update();

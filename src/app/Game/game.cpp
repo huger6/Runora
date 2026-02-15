@@ -1,5 +1,6 @@
 #include "game.hpp"
 #include "gamestate.hpp"
+#include <cmath>
 
 // Public
 
@@ -44,6 +45,11 @@ void Game::processEvents() {
 }
 
 void Game::update() {
+    // Calculate delta time for physics
+    float deltaTime = deltaClock.restart().asSeconds();
+    // Clamp deltaTime to prevent physics issues on lag spikes
+    deltaTime = std::min(deltaTime, 0.05f);
+
     // Check if it's the first game
     if (stateManager.getCurrentState() == GameState::MAIN_MENU) firstGame = true;
     
@@ -53,9 +59,12 @@ void Game::update() {
             hud.resetTimer();
             firstGame = false;
         }
-        player.update();
-        // Update camera based on player's position
-        camera.setCenter(player.getPosition());
+        player.update(deltaTime);
+        // Snap camera to nearest pixel to prevent sub-pixel tile rendering artifacts
+        sf::Vector2f camCenter = player.getPosition();
+        camCenter.x = std::round(camCenter.x);
+        camCenter.y = std::round(camCenter.y);
+        camera.setCenter(camCenter);
         window.setView(camera);
         // Update terrain
         terrain.update(player.getPosition());
@@ -79,7 +88,6 @@ void Game::render() {
         orbGenerator.draw(window);
         player.draw(window);
         hud.draw(window, camera);
-        orbGenerator.drawHitbox(window);
     }
     else {
         stateManager.draw(window);
