@@ -37,7 +37,7 @@
             "name": "waves",
             "type": "Water",
             "textureX": 0,
-            "textureY": 48,
+            "textureY": 32,
             "collision": "liquid"
         },
         {
@@ -45,7 +45,7 @@
             "name": "lava",
             "type": "Lava",
             "textureX": 0,
-            "textureY": 64,
+            "textureY": 48,
             "collision": "liquid"
         }
     ]

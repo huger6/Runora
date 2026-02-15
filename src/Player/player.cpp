@@ -181,6 +181,24 @@ void Player::draw(sf::RenderWindow& window) {
     drawHitbox(window);
 }
 
+bool Player::getIsGrounded() const {
+    return isGrounded;
+}
+
+void Player::reset() {
+    playerPos = {MapConfigs::STARTING_POSITION_X, MapConfigs::STARTING_POSITION_Y};
+    velocity = {0.0f, 0.0f};
+    acceleration = {0.0f, 0.0f};
+    isGrounded = true;
+    jumpsRemaining = PlayerConfigs::MAX_JUMPS;
+    jumpKeyWasPressed = false;
+    facing = FacingDirection::East;
+    animFrame = 0;
+    animTimer = 0.0f;
+    isDoubleJumping = false;
+    wasRunningBeforeJump = false;
+}
+
 
 // Animation
 

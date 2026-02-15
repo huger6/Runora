@@ -39,6 +39,33 @@ Chunk* TerrainGenerator::getChunk(const sf::Vector2f& playerCoords) {
 }
 
 /**
+ * @brief Returns the TileId at a given world pixel position
+ * 
+ * @param worldX X position in pixels
+ * @param worldY Y position in pixels
+ * @return TileId at that position, or TileId::None if chunk not loaded
+ */
+TileId TerrainGenerator::getTileIdAtWorldPos(float worldX, float worldY) const {
+    int tileX = static_cast<int>(floor(worldX / TileConfigs::TILE_SIZE));
+    int tileY = static_cast<int>(floor(worldY / TileConfigs::TILE_SIZE));
+
+    int chunkX = static_cast<int>(floor(static_cast<float>(tileX) / TileConfigs::CHUNK_WIDTH));
+    int chunkY = static_cast<int>(floor(static_cast<float>(tileY) / TileConfigs::CHUNK_HEIGHT));
+
+    sf::Vector2i chunkCoords(chunkX, chunkY);
+    auto it = map.find(chunkCoords);
+    if (it == map.end() || !it->second->loaded) return TileId::None;
+
+    int localX = tileX - chunkX * TileConfigs::CHUNK_WIDTH;
+    int localY = tileY - chunkY * TileConfigs::CHUNK_HEIGHT;
+
+    if (localX < 0 || localX >= TileConfigs::CHUNK_WIDTH ||
+        localY < 0 || localY >= TileConfigs::CHUNK_HEIGHT) return TileId::None;
+
+    return it->second->getTileId(static_cast<uint16_t>(localX), static_cast<uint16_t>(localY));
+}
+
+/**
  * @brief Returns global bounds of the map where to spawn orbs
  * 
  * @param playerPos Current player's position

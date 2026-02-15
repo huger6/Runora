@@ -26,6 +26,7 @@ class TerrainGenerator {
 
         void clear();
         Chunk* getChunk(const sf::Vector2f& playerCoords);
+        TileId getTileIdAtWorldPos(float worldX, float worldY) const;
         const std::vector<float> getSpawningOrbsLimitsX(const sf::Vector2f playerPos);
         uint16_t getSpawningOrbsLength() const;
     private:

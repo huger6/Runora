@@ -20,6 +20,7 @@ class OrbGenerator {
 
         void update(const sf::Vector2f& playerPos, const sf::FloatRect& playerHitbox, const sf::View& camera);
         void draw(sf::RenderWindow& window);
+        void reset();
 
         void drawHitbox(sf::RenderWindow& window);
     private:

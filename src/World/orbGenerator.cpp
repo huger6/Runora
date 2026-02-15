@@ -69,6 +69,12 @@ void OrbGenerator::drawHitbox(sf::RenderWindow& window) {
     }  
 }
 
+void OrbGenerator::reset() {
+    activeOrbs.clear();
+    processedPositions.clear();
+    orbCounter = 0;
+}
+
 
 // Private
 

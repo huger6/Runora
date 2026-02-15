@@ -49,7 +49,7 @@ inline sf::Texture& getBackgroundTexturePause() {
     static bool loaded = false;
 
     if (!loaded) {
-        if (!bgTexture.loadFromFile("assets/textures/fundo.jpg")) 
+        if (!bgTexture.loadFromFile("assets/textures/bg-menu.png")) 
             std::cout << "Failed to load background texture";
         loaded = true;
     }
@@ -58,7 +58,7 @@ inline sf::Texture& getBackgroundTexturePause() {
 }
 
 inline const std::string& getBackgroundTexturePausePath() {
-    static const std::string path = "assets/textures/fundo.jpg";
+    static const std::string path = "assets/textures/bg-menu.png";
     return path;
 }
 

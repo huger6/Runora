@@ -157,9 +157,73 @@ TileId Chunk::proceduralGenerator(uint32_t tileX, uint32_t tileY) {
         return TileId::Clouds;
     }
     if (tileY < MapConfigs::CHUNK_Y_AIR_VISIBLE * TileConfigs::CHUNK_HEIGHT + 1) return TileId::Air;
-    // Ground generation
+
+    // Ground generation - check for hazard segments (water/lava pools)
+    uint32_t groundStartY = MapConfigs::CHUNK_Y_AIR_VISIBLE * TileConfigs::CHUNK_HEIGHT + 1;
+    TileId hazard = generateHazard(tileX, tileY, groundStartY);
+    if (hazard != TileId::None) return hazard;
     
     return TileId::Brick;
+}
+
+/**
+ * @brief Checks if a ground tile should be a hazard (water/lava) segment
+ * 
+ * Uses deterministic hashing based on zone index to create consistent 
+ * hazard segments that vary in length (5-18 tiles) and type (water/lava).
+ * Segments are skippable by jumping or double jumping.
+ * 
+ * @param tileX Global tile X coordinate
+ * @param tileY Global tile Y coordinate
+ * @param groundStartY First row of ground tiles (Y)
+ * @return TileId of hazard tile, or TileId::None if no hazard
+ */
+TileId Chunk::generateHazard(uint32_t tileX, uint32_t tileY, uint32_t groundStartY) {
+    // Only generate hazards in the top rows of ground and past the safe zone
+    if (tileX <= HazardConfigs::SAFE_ZONE_X) return TileId::None;
+    if (tileY >= groundStartY + HazardConfigs::DEPTH) return TileId::None;
+
+    // Determine which zone this tile belongs to
+    uint32_t zoneIndex = tileX / HazardConfigs::ZONE_SIZE;
+
+    // Use independent hashes for each property to avoid bit-overlap artifacts
+    uint32_t chanceHash = hazardHash(zoneIndex * 0x10001u);
+    uint32_t lengthHash = hazardHash(zoneIndex * 0x20002u);
+    uint32_t offsetHash = hazardHash(zoneIndex * 0x30003u);
+    uint32_t typeHash   = hazardHash(zoneIndex * 0x40004u);
+
+    // Check if this zone has a hazard (HAZARD_CHANCE% probability)
+    if ((chanceHash % 100) >= HazardConfigs::HAZARD_CHANCE) return TileId::None;
+
+    // Usable area within the zone (excluding padding on both sides)
+    uint32_t usableZone = HazardConfigs::ZONE_SIZE - 2 * HazardConfigs::ZONE_PADDING;
+
+    // Calculate segment length (clamped to usable zone)
+    uint32_t lengthRange = HazardConfigs::MAX_LENGTH - HazardConfigs::MIN_LENGTH + 1;
+    uint32_t segLength = HazardConfigs::MIN_LENGTH + (lengthHash % lengthRange);
+    if (segLength > usableZone) segLength = usableZone;
+
+    // Position the segment within the padded zone
+    uint32_t maxOffset = (usableZone > segLength) ? (usableZone - segLength) : 0;
+    uint32_t segStart = zoneIndex * HazardConfigs::ZONE_SIZE
+                      + HazardConfigs::ZONE_PADDING
+                      + (offsetHash % (maxOffset + 1));
+
+    // Check if this tile falls within the hazard segment
+    if (tileX < segStart || tileX >= segStart + segLength) return TileId::None;
+
+    // Determine hazard type: ~33% lava, ~67% water
+    bool isLava = (typeHash % 3) == 0;
+
+    if (isLava) return TileId::Lava;
+    return TileId::Water;
+}
+
+uint32_t Chunk::hazardHash(uint32_t seed) {
+    seed = ((seed >> 16) ^ seed) * 0x45d9f3bu;
+    seed = ((seed >> 16) ^ seed) * 0x45d9f3bu;
+    seed = (seed >> 16) ^ seed;
+    return seed;
 }
 
 bool Chunk::generateClouds(uint32_t tileX, uint32_t tileY, uint16_t prob) const {
@@ -168,6 +232,5 @@ bool Chunk::generateClouds(uint32_t tileX, uint32_t tileY, uint16_t prob) const 
     hash = (hash ^ (hash >> 13)) * seed;
     hash = (hash ^ (hash >> 15));
 
-    // 4% prob
     return (hash % 100) < (prob % 100);
 }

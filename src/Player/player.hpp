@@ -41,6 +41,7 @@ class Player {
         Player(sf::Vector2f& playerPos);
 
         sf::Vector2f& getPosition();
+        bool getIsGrounded() const;
         void handleInput(float deltaTime);
         void applyPhysics(float deltaTime);
 
@@ -50,6 +51,7 @@ class Player {
 
         void update(float deltaTime);
         void draw(sf::RenderWindow& window);
+        void reset();
 
     private:
         sf::Sprite player;

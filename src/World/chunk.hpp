@@ -21,6 +21,16 @@ namespace ChunkConfigs {
     constexpr uint16_t TILE_GENERATE_CLOUDS_4 = 97;
 }
 
+namespace HazardConfigs {
+    constexpr uint32_t ZONE_SIZE = 30;           // Tiles per potential hazard zone (smaller = more frequent)
+    constexpr uint32_t HAZARD_CHANCE = 70;       // Percentage chance per zone to spawn a hazard
+    constexpr uint32_t MIN_LENGTH = 3;           // Minimum hazard segment length (very easy hop)
+    constexpr uint32_t MAX_LENGTH = 16;          // Maximum hazard segment length (hard, needs double jump)
+    constexpr uint32_t DEPTH = 3;                // How many tile rows deep the hazard pool extends
+    constexpr uint32_t SAFE_ZONE_X = 370;        // No hazards before this tile X (protects spawn area)
+    constexpr uint32_t ZONE_PADDING = 3;         // Min gap from zone edges (prevents adjacent different-type traps)
+}
+
 
 class Chunk {
     public:
@@ -54,6 +64,8 @@ class Chunk {
         bool needsUpdate;
 
         TileId proceduralGenerator(uint32_t tileX, uint32_t tileY);
+        TileId generateHazard(uint32_t tileX, uint32_t tileY, uint32_t groundStartY);
 
         bool generateClouds(uint32_t tileX, uint32_t tileY, uint16_t prob) const;
+        static uint32_t hazardHash(uint32_t seed);
 };
